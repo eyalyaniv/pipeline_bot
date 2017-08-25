@@ -1,0 +1,31 @@
+{
+  "name": "7es-pmb",
+  "version": "0.1.0",
+  "description": "process manager bot service",
+  "main": "index.js",
+  "dependencies": {
+    "async": "^2.0.1",
+    "body-parser": "^1.15.1",
+    "botkit": "^0.2.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "leankit-client": "^1.1.2",
+    "osg-config-agent": "^0.2.14",
+    "osg-cw": "^0.1.5",
+    "osg-logger": "^0.2.6",
+    "osg-vercheck": "^0.2.2",
+    "slack-node": "^0.2.0",
+    "slackbots": "^1.0.2",
+    "striptags": "^3.0.1"
+  },
+  "devDependencies": {
+    "mocha": "~2.2.1",
+    "mocha-ui-exports": "~0.2.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "",
+  "license": "UNLICENSED",
+  "readmeFilename": "README.md"
+}

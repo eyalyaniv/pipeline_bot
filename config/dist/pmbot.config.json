@@ -1,0 +1,97 @@
+{
+    "app": {
+        "name": "pmbot",
+        "port": 3000
+    },
+    "pmbot": {
+        "leankit": {
+            "accountName": "https://core3.leankit.com/",
+            "email": "pipelinebot@gmail.com",
+            "password": "pipelinebot2leankit",
+            "pollInterval": 10,
+            "boardId_execution": 517741114,
+            "pmbot_leankit_id": 530521792,
+            "boardNameToId": {
+                "AutoViews component": "520935890",
+                "Components Library": "520935889",
+                "Core3 Execution": "517741114",
+                "Core3 Iteration Planing": "524067193",
+                "DEVOPS": "520951053",
+                "Dev Rel - Bruce": "527462964",
+                "Dev Server": "520935891",
+                "Docmentation": "520951047",
+                "Hadar & Eyal": "530046912",
+                "INTELLIGENCE (STYLABLE TOOL)": "527142347",
+                "React Bases": "520951040",
+                "Stylable": "520936591"
+            }
+        },
+        "slack": {
+            "pmbotOwner": "U03H0P5RC",
+            "pmbotOwnerSlackNick": "@eyalyaniv",
+            "slackInt": true,
+            "isTestMode": false,
+            "webhookUri": "https://hooks.slack.com/services/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",
+            "slackApiToken": "xoxb-229557440388-1x3VRSbiDclkRvXRauVaUfqP",
+            "slackTestApiToken": "",
+            "pmbot_leankit_id": 530521792
+        },
+        "gsheets": {
+            "gsheetsInt": true,
+            "gms_pdr_script_url": "https://script.google.com/macros/s/AKfycbzcvQTbcG4G5ndDydB2y9_wAAi-Cnpov4Iif44eg_tLrnqXqRT-/exec",
+            "ge_pdr_script_url": "https://script.google.com/a/macros/7elementsstudios.com/s/AKfycbyY_USM0MnDkF-CZzcPj7UMWR05o-l5WKY806AvviT_PHJL8eB-/exec",
+            "client_pdr_script_url": "https://script.google.com/macros/s/AKfycbzhwfvUC-zCq4iLXuNjUCSDxmwzG_FmF12aKOYIuV7AmEV6Ogg/exec",
+            "devops_pdr_script_url": "https://script.google.com/a/macros/7elementsstudios.com/s/AKfycbzBjUiUXv1jRYUYZLY8L3GoUJx5RgUqmS_tn568MPHct08o7Mo/exec"
+        },
+        "validations": {
+            "card_owner_tag_RegEx": "owner:",
+            "unity_codeReviewTagRegEx": "cr:",
+            "unity_demoedTagRegEx": "demo-pass:",
+            "unity_demoFailTagRegEx": "demo-fail:",
+            "unity_notTestedByOwnerTagRegEx": "Build #",
+            "game_managment_codeReviewTagRegEx": "cr:",
+            "game_managment_demoedTagRegEx": "demo-pass:",
+            "game_managment_demoFailTagRegEx": "demo-fail:",
+            "game_engine_codeReviewTagRegEx": "cr:",
+            "game_engine_demoedTagRegEx": "demo-pass:",
+            "game_engine_demoFailTagRegEx": "demo-fail:",
+            "devops_codeReviewTagRegEx": "cr:",
+            "devops_demoedTagRegEx": "demo-pass:",
+            "devops_demoFailTagRegEx": "demo-fail:",
+            "post_pmbot_demo_reportRegEx": "pmbot-gsheets"
+        }
+    },
+    "cloudWatch": {
+        "enable": false,
+        "interval": 60000,
+        "region": "us-east-1",
+        "accessKeyId": "AKIAI7AHABGLCKI44RAA",
+        "secretAccessKey": "bvuXnqlWaX2n7XHnUJL0ivj8O2jdSb8X6zUH8vId"
+    },
+    "loggers": {
+        "replaceConsole": true,
+        "levels": {
+            "[all]": "INFO"
+        },
+        "appenders": [
+            {
+                "type": "console",
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d{ISO8601}] [%p] %c [%m]"
+                }
+            },
+            {
+                "type": "file",
+                "layout": {
+                    "type": "pattern",
+                    "pattern": "[%d{ISO8601}] [%p] %c [%m]"
+                },
+                "absolute": true,
+                "filename": "./../log/7es-pmb.log",
+                "maxLogSize": 10240000,
+                "backups": 1
+            }
+        ]
+    }
+}

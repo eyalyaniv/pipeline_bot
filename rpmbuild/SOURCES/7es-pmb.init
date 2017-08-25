@@ -1,0 +1,87 @@
+#!/bin/bash
+
+# 7es-pmb init script
+#
+# chkconfig: 345 80 20
+#
+# description: 7ES-PMB component of the Best Strategy MMO Game in the World
+# processname: 7es-pmb
+#
+### BEGIN INIT INFO
+# Provides:             7es-pmb
+# Required-Start:       $local_fs $remote_fs
+# Required-Stop:        $local_fs $remote_fs
+# Should-Start:         $network
+# Should-Stop:          $network
+# Default-Start:        2 3 4 5
+# Default-Stop:         0 1 6
+# Short-Description:    7es-pmb init script
+# Description:          7ES-PMB component of the Best Strategy MMO Game in the World
+### END INIT INFO
+
+NAME='7es-pmb'
+PM2=/usr/lib/node_modules/pm2/bin/pm2
+USER=pm2
+
+export PATH=:/usr/local/bin:/usr/local/sbin:/usr/bin:$PATH
+export PM2_HOME="/var/lib/pm2"
+
+lockfile="/var/lock/subsys/$NAME"
+
+super() {
+    su - $USER -c "PATH=$PATH PM2_HOME=$PM2_HOME $*"
+}
+
+start() {
+    echo "Starting $NAME"
+    super $PM2 start "/etc/7es/pmb/dist/pm2.config.json"
+    retval=$?
+    [ $retval -eq 0 ] && touch $lockfile
+}
+
+stop() {
+    echo "Stopping $NAME"
+    super $PM2 stop $NAME
+    super $PM2 delete $NAME
+    rm -f $lockfile
+}
+
+restart() {
+    echo "Restarting $NAME"
+    stop
+    start
+}
+
+reload() {
+    echo "Reloading $NAME"
+    super $PM2 reload $NAME
+}
+
+status() {
+    echo "Status for $NAME:"
+    super $PM2 info $NAME
+    RETVAL=$?
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    status)
+        status
+        ;;
+    restart)
+        restart
+        ;;
+    reload)
+        reload
+        ;;
+    *)
+        echo "Usage: {start|stop|status|restart|reload}"
+        exit 1
+        ;;
+esac
+exit $RETVAL

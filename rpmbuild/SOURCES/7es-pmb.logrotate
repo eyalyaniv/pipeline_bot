@@ -1,0 +1,20 @@
+/var/log/7es/7es-pmb.log.1 {
+    hourly
+    missingok
+    rotate 1
+    notifempty
+    maxsize=1
+    nocreate
+    sharedscripts
+    dateext
+    su pm2 pm2
+    postrotate
+        path="/var/log/7es"
+        file="7es-pmb.log.1"
+        instance="${OSG_ENV}"
+        timestamp=$(date +%Y%m%dT%H%M%SZ)
+        mv ${path}/${file}-$(date +%Y%m%d%H) ${path}/${file%.*.1}_${instance}_${timestamp}
+        gzip ${path}/${file%.*.1}_${instance}_${timestamp}
+        find ${path}/${file%.*.1}_${instance}_* -mtime +14 -delete
+    endscript
+}
