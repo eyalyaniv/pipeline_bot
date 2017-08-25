@@ -19,15 +19,15 @@ module.exports = function (config, ready) {
     var slackInt = config.pmbot.slack.slackInt;
     var isTestMode = config.pmbot.slack.isTestMode;
     //Slack incoming webhook URL
-    var webhookUri = config.pmbot.slack.webhookUri;
+    //var webhookUri = config.pmbot.slack.webhookUri;
     //Slack Bot API token (secret!)
     var slackApiToken = null;
     if(isTestMode)
         slackApiToken = config.pmbot.slack.slackTestApiToken;
     else
         slackApiToken = config.pmbot.slack.slackApiToken;
-    var slack = new Slack();
-    slack.setWebhook(webhookUri);
+    //var slack = new Slack();
+    //slack.setWebhook(webhookUri);
 
     // <<<<<<<<<<<   Initiation of "botkit" framework >>>>>>>>>>>>>>>> //
     var controller = Botkit.slackbot();

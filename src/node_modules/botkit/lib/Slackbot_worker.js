@@ -7,6 +7,7 @@ var Back = require('back');
 
 module.exports = function(botkit, config) {
     var bot = {
+        type: 'slack',
         botkit: botkit,
         config: config || {},
         utterances: botkit.utterances,
@@ -17,13 +18,20 @@ module.exports = function(botkit, config) {
         }
     };
 
-    var pingIntervalId = null;
-    var lastPong = 0;
+    // Set when destroy() is called - prevents a reconnect from completing
+    // if it was fired off prior to destroy being called
+    var destroyed = false;
+    var pingTimeoutId = null;
     var retryBackoff = null;
 
     // config.retry, can be Infinity too
-    var retryEnabled = bot.config.retry ? true : false;
-    var maxRetry = isNaN(bot.config.retry) || bot.config.retry <= 0 ? 3 : bot.config.retry;
+    var retryEnabled = bot.config.retry ? true : (botkit.config.retry ? true : false);
+    var maxRetry = null;
+    if (bot.config.retry) {
+        maxRetry = isNaN(bot.config.retry) || bot.config.retry <= 0 ? 3 : bot.config.retry;
+    } else if (botkit.config.retry) {
+        maxRetry = isNaN(botkit.config.retry) || botkit.config.retry <= 0 ? 3 : botkit.config.retry;
+    }
 
     /**
      * Set up API to send incoming webhook
@@ -65,11 +73,10 @@ module.exports = function(botkit, config) {
             bot.rtm.close();
         }
 
-        if (pingIntervalId) {
-            clearInterval(pingIntervalId);
+        if (pingTimeoutId) {
+            clearTimeout(pingTimeoutId);
         }
 
-        lastPong = 0;
         botkit.trigger('rtm_close', [bot, err]);
 
         // only retry, if enabled, when there was an error
@@ -97,7 +104,7 @@ module.exports = function(botkit, config) {
             botkit.log.notice('** BOT ID:', bot.identity.name, '...reconnect attempt #' +
                 back.settings.attempt + ' of ' + options.retries + ' being made after ' + back.settings.timeout + 'ms');
             bot.startRTM(function(err) {
-                if (err) {
+                if (err && !destroyed) {
                     return reconnect(err);
                 }
                 retryBackoff = null;
@@ -109,6 +116,9 @@ module.exports = function(botkit, config) {
      * Shutdown and cleanup the spawned worker
      */
     bot.destroy = function() {
+        // this prevents a startRTM from completing if it was fired off
+        // prior to destroy being called
+        destroyed = true;
         if (retryBackoff) {
             retryBackoff.close();
             retryBackoff = null;
@@ -118,10 +128,8 @@ module.exports = function(botkit, config) {
     };
 
     bot.startRTM = function(cb) {
-        bot.api.rtm.start({
-            no_unreads: true,
-            simple_latest: true,
-        }, function(err, res) {
+        var lastPong = 0;
+        bot.api.rtm.connect({}, function(err, res) {
             if (err) {
                 return cb && cb(err);
             }
@@ -133,13 +141,11 @@ module.exports = function(botkit, config) {
             bot.identity = res.self;
             bot.team_info = res.team;
 
-            /**
-             * Also available:
-             * res.users, res.channels, res.groups, res.ims,
-             * res.bots
-             *
-             * Could be stored & cached for later use.
-             */
+            // Bail out if destroy() was called
+            if (destroyed) {
+                botkit.log.notice('Ignoring rtm.start response, bot was destroyed');
+                return cb('Ignoring rtm.start response, bot was destroyed');
+            }
 
             botkit.log.notice('** BOT ID:', bot.identity.name, '...attempting to connect to RTM!');
 
@@ -149,30 +155,35 @@ module.exports = function(botkit, config) {
                 agent = new HttpsProxyAgent(proxyUrl);
             }
 
-            bot.rtm = new Ws(res.url, null, {agent: agent});
+            bot.rtm = new Ws(res.url, null, {
+                agent: agent
+            });
             bot.msgcount = 1;
 
             bot.rtm.on('pong', function(obj) {
                 lastPong = Date.now();
-                botkit.debug('PONG received');
             });
 
             bot.rtm.on('open', function() {
                 botkit.log.notice('RTM websocket opened');
 
-                pingIntervalId = setInterval(function() {
-                    if (lastPong && lastPong + 12000 < Date.now()) {
+                var pinger = function() {
+                    var pongTimeout = bot.botkit.config.stale_connection_timeout || 12000;
+                    if (lastPong && lastPong + pongTimeout < Date.now()) {
                         var err = new Error('Stale RTM connection, closing RTM');
+                        botkit.log.error(err);
                         bot.closeRTM(err);
+                        clearTimeout(pingTimeoutId);
                         return;
                     }
 
-                    botkit.debug('PING sent');
-                    bot.rtm.ping(null, null, true);
-                }, 5000);
+                    bot.rtm.ping();
+                    pingTimeoutId = setTimeout(pinger, 5000);
+                };
+
+                pingTimeoutId = setTimeout(pinger, 5000);
 
                 botkit.trigger('rtm_open', [bot]);
-
                 bot.rtm.on('message', function(data, flags) {
 
                     var message = null;
@@ -187,7 +198,7 @@ module.exports = function(botkit, config) {
                      * but adds in additional fields for internal use!
                      * (including the teams api details)
                      */
-                    if (message != null) {
+                    if (message != null && bot.botkit.config.rtm_receive_messages) {
                         botkit.receiveMessage(bot, message);
                     }
                 });
@@ -199,16 +210,16 @@ module.exports = function(botkit, config) {
 
             bot.rtm.on('error', function(err) {
                 botkit.log.error('RTM websocket error!', err);
-                if (pingIntervalId) {
-                    clearInterval(pingIntervalId);
+                if (pingTimeoutId) {
+                    clearTimeout(pingTimeoutId);
                 }
                 botkit.trigger('rtm_close', [bot, err]);
             });
 
             bot.rtm.on('close', function(code, message) {
                 botkit.log.notice('RTM close event: ' + code + ' : ' + message);
-                if (pingIntervalId) {
-                    clearInterval(pingIntervalId);
+                if (pingTimeoutId) {
+                    clearTimeout(pingTimeoutId);
                 }
                 botkit.trigger('rtm_close', [bot]);
 
@@ -227,44 +238,52 @@ module.exports = function(botkit, config) {
     };
 
     bot.identifyBot = function(cb) {
+        var data;
         if (bot.identity) {
-            bot.identifyTeam(function(err, team) {
-                cb(null, {
-                    name: bot.identity.name,
-                    id: bot.identity.id,
-                    team_id: team
-                });
-            });
+            data = {
+                name: bot.identity.name,
+                id: bot.identity.id,
+                team_id: bot.identifyTeam()
+            };
+            cb && cb(null, data);
+            return data;
         } else {
             /**
              * Note: Are there scenarios other than the RTM
              * where we might pull identity info, perhaps from
              * bot.api.auth.test on a given token?
              */
-            cb('Identity Unknown: Not using RTM api');
+            cb && cb('Identity Unknown: Not using RTM api');
+            return null;
         };
     };
 
     bot.identifyTeam = function(cb) {
-        if (bot.team_info)
-            return cb(null, bot.team_info.id);
+        if (bot.team_info) {
+            cb && cb(null, bot.team_info.id);
+            return bot.team_info.id;
+        }
 
         /**
          * Note: Are there scenarios other than the RTM
          * where we might pull identity info, perhaps from
          * bot.api.auth.test on a given token?
          */
-        cb('Unknown Team!');
+        cb && cb('Unknown Team!');
+        return null;
     };
 
     /**
      * Convenience method for creating a DM convo.
      */
     bot.startPrivateConversation = function(message, cb) {
-        botkit.startTask(this, message, function(task, convo) {
-            bot._startDM(task, message.user, function(err, dm) {
-                convo.stop();
-                cb(err, dm);
+        bot.api.im.open({ user: message.user }, function(err, channel) {
+            if (err) return cb(err);
+
+            message.channel = channel.channel.id;
+
+            botkit.startTask(bot, message, function(task, convo) {
+                cb(null, convo);
             });
         });
     };
@@ -272,6 +291,37 @@ module.exports = function(botkit, config) {
     bot.startConversation = function(message, cb) {
         botkit.startConversation(this, message, cb);
     };
+
+    bot.startConversationInThread = function(message, cb) {
+        // make replies happen in a thread
+        if (!message.thread_ts) {
+            message.thread_ts = message.ts;
+        }
+        botkit.startConversation(this, message, cb);
+    };
+
+    bot.createConversation = function(message, cb) {
+        botkit.createConversation(this, message, cb);
+    };
+
+    bot.createPrivateConversation = function(message, cb) {
+        bot.api.im.open({ user: message.user }, function(err, channel) {
+            if (err) return cb(err);
+
+            message.channel = channel.channel.id;
+
+            botkit.createConversation(bot, message, cb);
+        });
+    };
+
+    bot.createConversationInThread = function(message, cb) {
+        // make replies happen in a thread
+        if (!message.thread_ts) {
+            message.thread_ts = message.ts;
+        }
+        botkit.createConversation(this, message, cb);
+    };
+
 
     /**
      * Convenience method for creating a DM convo.
@@ -298,6 +348,8 @@ module.exports = function(botkit, config) {
             channel: message.channel,
             text: message.text || null,
             username: message.username || null,
+            thread_ts: message.thread_ts || null,
+            reply_broadcast: message.reply_broadcast || null,
             parse: message.parse || null,
             link_names: message.link_names || null,
             attachments: message.attachments ?
@@ -316,10 +368,12 @@ module.exports = function(botkit, config) {
         }
 
         /**
-         * These options are not supported by the RTM
-         * so if they are specified, we use the web API to send messages.
+         * Use the web api to send messages unless otherwise specified
+         * OR if one of the fields that is only supported by the web api is present
          */
-        if (message.attachments || message.icon_emoji ||
+        if (
+            botkit.config.send_via_rtm !== true && message.type !== 'typing' ||
+            message.attachments || message.icon_emoji ||
             message.username || message.icon_url) {
 
             if (!bot.config.token) {
@@ -346,7 +400,7 @@ module.exports = function(botkit, config) {
                     if (err) {
                         cb && cb(err);
                     } else {
-                        cb && cb();
+                        cb && cb(null, slack_message);
                     }
                 });
             } catch (err) {
@@ -358,6 +412,23 @@ module.exports = function(botkit, config) {
                  */
                 cb && cb(err);
             }
+        }
+    };
+
+    /**
+    * Allows responding to slash commands and interactive messages with a plain
+    * 200 OK (without any text or attachments).
+    *
+    * @param {function} cb - An optional callback function called at the end of execution.
+    * The callback is passed an optional Error object.
+    */
+    bot.replyAcknowledge = function(cb) {
+        if (!bot.res) {
+            cb && cb(new Error('No web response object found'));
+        } else {
+            bot.res.end();
+
+            cb && cb();
         }
     };
 
@@ -374,6 +445,11 @@ module.exports = function(botkit, config) {
             }
 
             msg.channel = src.channel;
+
+            // if source message is in a thread, reply should also be in the thread
+            if (src.thread_ts) {
+                msg.thread_ts = src.thread_ts;
+            }
 
             msg.response_type = 'in_channel';
             bot.res.json(msg);
@@ -394,6 +470,11 @@ module.exports = function(botkit, config) {
             }
 
             msg.channel = src.channel;
+
+            // if source message is in a thread, reply should also be in the thread
+            if (src.thread_ts) {
+                msg.thread_ts = src.thread_ts;
+            }
 
             msg.response_type = 'in_channel';
             var requestOptions = {
@@ -429,6 +510,11 @@ module.exports = function(botkit, config) {
 
             msg.channel = src.channel;
 
+            // if source message is in a thread, reply should also be in the thread
+            if (src.thread_ts) {
+                msg.thread_ts = src.thread_ts;
+            }
+
             msg.response_type = 'ephemeral';
             bot.res.json(msg);
 
@@ -449,6 +535,11 @@ module.exports = function(botkit, config) {
             }
 
             msg.channel = src.channel;
+
+            // if source message is in a thread, reply should also be in the thread
+            if (src.thread_ts) {
+                msg.thread_ts = src.thread_ts;
+            }
 
             msg.response_type = 'ephemeral';
 
@@ -485,6 +576,11 @@ module.exports = function(botkit, config) {
 
             msg.channel = src.channel;
 
+            // if source message is in a thread, reply should also be in the thread
+            if (src.thread_ts) {
+                msg.thread_ts = src.thread_ts;
+            }
+
             var requestOptions = {
                 uri: src.response_url,
                 method: 'POST',
@@ -514,6 +610,28 @@ module.exports = function(botkit, config) {
         }
 
         msg.channel = src.channel;
+
+        // if source message is in a thread, reply should also be in the thread
+        if (src.thread_ts) {
+            msg.thread_ts = src.thread_ts;
+        }
+
+        bot.say(msg, cb);
+    };
+
+    bot.replyInThread = function(src, resp, cb) {
+        var msg = {};
+
+        if (typeof(resp) == 'string') {
+            msg.text = resp;
+        } else {
+            msg = resp;
+        }
+
+        msg.channel = src.channel;
+
+        // to create a thread, set the original message as the parent
+        msg.thread_ts = src.thread_ts ? src.thread_ts : src.ts;
 
         bot.say(msg, cb);
     };
@@ -554,6 +672,45 @@ module.exports = function(botkit, config) {
     };
 
     /**
+     * replies with message, performs arbitrary task, then updates reply message
+     * note: don't use this as a replacement for the `typing` event
+     *
+     * @param {Object} src - message source
+     * @param {(string|Object)} resp - response string or object
+     * @param {function} [cb] - updater callback
+     */
+    bot.replyAndUpdate = function(src, resp, cb) {
+        try {
+            resp = typeof resp === 'string' ? { text: resp } : resp;
+            // trick bot.reply into using web API instead of RTM
+            resp.attachments = resp.attachments || [];
+        } catch (err) {
+            return cb && cb(err);
+        }
+        // send the "updatable" message
+        return bot.reply(src, resp, function(err, src) {
+            if (err) return cb && cb(err);
+
+            // if provided, call the updater callback - it controls how and when to update the "updatable" message
+            return cb && cb(null, src, function(resp, cb) {
+                try {
+                    // format the "update" message to target the "updatable" message
+                    resp = typeof resp === 'string' ? { text: resp } : resp;
+                    resp.ts = src.ts;
+                    resp.channel = src.channel;
+                    resp.attachments = JSON.stringify(resp.attachments || []);
+                } catch (err) {
+                    return cb && cb(err);
+                }
+                // update the "updatable" message with the "update" message
+                return bot.api.chat.update(resp, function(err, json) {
+                    return cb && cb(err, json);
+                });
+            });
+        });
+    };
+
+    /**
      * This handles the particulars of finding an existing conversation or
      * topic to fit the message into...
      */
@@ -566,7 +723,8 @@ module.exports = function(botkit, config) {
                     if (
                         botkit.tasks[t].convos[c].isActive() &&
                         botkit.tasks[t].convos[c].source_message.user == message.user &&
-                            botkit.tasks[t].convos[c].source_message.channel == message.channel
+                            botkit.tasks[t].convos[c].source_message.channel == message.channel &&
+                            botkit.tasks[t].convos[c].source_message.thread_ts == message.thread_ts
                     ) {
                         botkit.debug('FOUND EXISTING CONVO!');
 
@@ -577,12 +735,12 @@ module.exports = function(botkit, config) {
 
                         if (message.text) {
                             message.text = message.text.trim();
+
+                            var direct_mention = new RegExp('^\<\@' + bot.identity.id + '\>', 'i');
+
+                            message.text = message.text.replace(direct_mention, '')
+                            .replace(/^\s+/, '').replace(/^\:\s+/, '').replace(/^\s+/, '');
                         }
-
-                        var direct_mention = new RegExp('^\<\@' + bot.identity.id + '\>', 'i');
-
-                        message.text = message.text.replace(direct_mention, '')
-                        .replace(/^\s+/, '').replace(/^\:\s+/, '').replace(/^\s+/, '');
 
                         cb(botkit.tasks[t].convos[c]);
                         return;
