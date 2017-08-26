@@ -10,7 +10,7 @@
             "password": "pipelinebot2leankit",
             "pollInterval": 10,
             "boardId_execution": 517741114,
-            "pmbot_leankit_id": 530521792,
+            "pmbot_leankit_id": 382665896,
             "boardNameToId": {
                 "AutoViews component": "520935890",
                 "Components Library": "520935889",
@@ -32,7 +32,7 @@
             "slackInt": true,
             "isTestMode": false,
             "webhookUri": "https://hooks.slack.com/services/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",
-            "slackApiToken": "xoxb-229557440388-MNeVVCTxrvDYbk5c15S35wII",
+            "slackApiToken": "xoxb-229557440388-TcZhAygpB3eLoT6wfF3UFcCN",
             "slackTestApiToken": "",
             "pmbot_leankit_id": 530521792
         },
