@@ -32,7 +32,7 @@
             "slackInt": true,
             "isTestMode": false,
             "webhookUri": "https://hooks.slack.com/services/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",
-            "slackApiToken": "xoxb-229557440388-TcZhAygpB3eLoT6wfF3UFcCN",
+            "slackApiToken": "xoxb-229557440388-vtF4Pgcwt2nzytFoOe3yrLQU",
             "slackTestApiToken": "",
             "pmbot_leankit_id": 530521792
         },

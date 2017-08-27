@@ -33,8 +33,8 @@ module.exports = {
             slackInt: true, 
             isTestMode: false,
             webhookUri:"https://hooks.slack.com/services/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",
-            slackApiToken: "xoxb-74755017729-LD8Y5277znGrHLhQfpyW0fx1",
-            slackTestApiToken: "xoxb-79125359088-KjVeBAQ3WIuwPsA609B3ZJP9",
+            slackApiToken: "xoxb-229557440388-vtF4Pgcwt2nzytFoOe3yrLQU",
+            slackTestApiToken: "",
             pmbot_leankit_id: 382665896
     },
     gsheets:{
