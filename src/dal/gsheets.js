@@ -146,7 +146,7 @@ module.exports = function (config, ready) {
             title: card.Title, 
             demoedTo: demoedTo[0],
             demoDate: demoDate,
-            cardLink: "https://egames.leankit.com/Boards/View/156116725" + "/" + card.Id,
+            cardLink: "https://core3.leankit.com//Boards/View/156116725" + "/" + card.Id,
             cardSize: card.Size,
             numOfDemos: numOfDemos,
             dueTime: dueTime,

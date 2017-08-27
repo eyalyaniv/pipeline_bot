@@ -5,12 +5,12 @@ module.exports = {
   },
   pmbot: {
     leankit: {
-      accountName: "https://egames.leankit.com",
-      email: "pmbot@7egames.com",
-      password: "pmbot2leankit",
+      accountName: "https://core3.leankit.com/",
+      email: "pipelinebot@gmail.com",
+      password: "pipelinebot2leankit",
       pollInterval: 10, //Seconds
       boardId_execution: 156116725, //Execution board Id
-      pmbot_leankit_id: 382665896,
+      pmbot_leankit_id: 530521792,
       boardNameToId: {
                 plan: "213572592",
                 execution: "156116725",
@@ -28,14 +28,14 @@ module.exports = {
       }
     },
     slack:{
-            pmbotOwner: "U03H0P5RC",
+            pmbotOwner: "U69B1LVV1",
             pmbotOwnerSlackNick: "@eyalyaniv",
             slackInt: true, 
             isTestMode: false,
             webhookUri:"https://hooks.slack.com/services/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",
             slackApiToken: "xoxb-229557440388-vtF4Pgcwt2nzytFoOe3yrLQU",
             slackTestApiToken: "",
-            pmbot_leankit_id: 382665896
+            pmbot_leankit_id: 530521792
     },
     gsheets:{
             gsheetsInt: true,

@@ -169,7 +169,7 @@ module.exports = function (app, ready) {
         "520936591": "Stylable"
     };
 
-    var versionTags = ["astroids", "bioshock", "contra", "diablo", "eve", "eve2", "eve3", "fallout", "gta", "gta2", "gta3", "halo", "halo2", "ico", "ico2", "jill", "jill2", "karateka", "karateka2", "larry", "mario", "nba"];
+    var versionTags = ["iteration_one", "iteration_two", "iteration_three"];
 
     var classOfServices = ["AutoViews", "Componenets lib product", "Components lib dev", "Components lib QA", "Components lib UX", "Dev Server", "DevOps", "Intelligence", "Product", "React bases", "Stylable", "Technical docs"];
 

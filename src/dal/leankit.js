@@ -126,7 +126,7 @@ module.exports = function (config, ready) {
     }
 
     function constructLeankitCardUrl(boardId, cardId) {
-        var cardUrl = "https://egames.leankit.com/Boards/View/" + boardId + "/" + cardId;
+        var cardUrl = "https://core3.leankit.com//Boards/View/" + boardId + "/" + cardId;
         return cardUrl;
     }
 

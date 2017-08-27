@@ -10,7 +10,7 @@
             "password": "pipelinebot2leankit",
             "pollInterval": 10,
             "boardId_execution": 517741114,
-            "pmbot_leankit_id": 382665896,
+            "pmbot_leankit_id": 530521792,
             "boardNameToId": {
                 "AutoViews component": "520935890",
                 "Components Library": "520935889",
@@ -27,7 +27,7 @@
             }
         },
         "slack": {
-            "pmbotOwner": "U03H0P5RC",
+            "pmbotOwner": "U69B1LVV1",
             "pmbotOwnerSlackNick": "@eyalyaniv",
             "slackInt": true,
             "isTestMode": false,
