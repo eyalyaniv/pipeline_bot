@@ -35,7 +35,8 @@ module.exports = function (app, ready) {
         {
             leankit: app.dal.of('leankit').bind(null, config),
             slack: app.dal.of('slack').bind(null, config),
-            gsheets: app.dal.of('gsheets').bind(null, config)
+            gsheets: app.dal.of('gsheets').bind(null, config),
+           // github: app.dal.of('github').bind(null, config)
         },
         function (err, dals_) {
             if (err) {
