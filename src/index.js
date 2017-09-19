@@ -3,7 +3,7 @@ var logger = require("osg-logger"),
     config = require("osg-config-agent").get("pmbot.config")
     ;
 
-logger.configure(config.loggers);
+logger.configure(config.loggers); //Configure the logger service with config parameters
 
 var log = logger.of("index"),
     webapp = require('express')(),

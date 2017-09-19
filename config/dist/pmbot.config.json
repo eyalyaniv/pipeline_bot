@@ -12,16 +12,15 @@
             "boardId_execution": 517741114,
             "pmbot_leankit_id": 530521792,
             "boardNameToId": {
-                "AutoViews component": "520935890",
-                "Components Library": "520935889",
+                "Autoviews": "520935890",
+                "Components": "520935889",
                 "Core3 Execution": "517741114",
                 "Core3 Iteration Planing": "524067193",
                 "DEVOPS": "520951053",
                 "Dev Rel - Bruce": "527462964",
                 "Dev Server": "520935891",
                 "Docmentation": "520951047",
-                "Hadar & Eyal": "530046912",
-                "INTELLIGENCE (STYLABLE TOOL)": "527142347",
+                "Intelligence (Stylable tool)": "527142347",
                 "React Bases": "520951040",
                 "Stylable": "520936591"
             }
@@ -32,7 +31,7 @@
             "slackInt": true,
             "isTestMode": false,
             "webhookUri": "https://hooks.slack.com/services/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",
-            "slackApiToken": "xoxb-229557440388-vtF4Pgcwt2nzytFoOe3yrLQU",
+            "slackApiToken": "xoxb-229557440388-YQ7no2bvQVrJ29lWdMmcWJ8s",
             "slackTestApiToken": "",
             "pmbot_leankit_id": 530521792
         },

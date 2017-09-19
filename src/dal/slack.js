@@ -41,6 +41,14 @@ module.exports = function (config, ready) {
         name: 'pmbot'
     });
 
+    // <<<<<<<<<<<   Initiation of "Slack" framework >>>>>>>>>>>>>>>> //
+
+    //slack = new Slack(slackApiToken);
+    
+    // slack.api("users.list", function(err, response) {
+    //     console.log(response);
+    // });
+
     botkit_bot.startRTM(function (err, bot, payload) {
         if (err) {
             return ready('botkit framework Could not connect to Slack');

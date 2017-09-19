@@ -6,9 +6,10 @@ module.exports = function (controller, middlewares) {
 
 	var router = express.Router();
 
-	// router.get('/alive', function (req, res) {
-	// 	res.json({ e: 0, r: Date.now() });
-	// });
+	router.get('/status', function (req, res) {
+		res.status(200);
+		//res.json({ e: 200, r: Date.now() });
+	});
 
 	return router;
 };

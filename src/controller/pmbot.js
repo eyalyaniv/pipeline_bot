@@ -17,15 +17,15 @@ module.exports = function (app, ready) {
     var validator = validations(config.pmbot.validations);
     var dals;
 
-    /**/var boardId_execution = config.pmbot.leankit.boardNameToId["Core3 Execution"];
-    var boardId_autoviews = config.pmbot.leankit.boardNameToId["AutoViews component"];
-    var boardId_components = config.pmbot.leankit.boardNameToId["Components Library"];
+    var boardId_execution = config.pmbot.leankit.boardNameToId["Core3 Execution"];
+    var boardId_autoviews = config.pmbot.leankit.boardNameToId["Autoviews"];
+    var boardId_components = config.pmbot.leankit.boardNameToId["Components"];
     /**/var boardId_plan = config.pmbot.leankit.boardNameToId["Core3 Iteration Planing"];
     var boardId_devrel = config.pmbot.leankit.boardNameToId["Dev Rel - Bruce"];
     var boardId_devserver = config.pmbot.leankit.boardNameToId["Dev Server"];
     /**/var boardId_devops = config.pmbot.leankit.boardNameToId["DEVOPS"];
     var boardId_docmentation = config.pmbot.leankit.boardNameToId["Docmentation"];
-    var boardId_intelligence = config.pmbot.leankit.boardNameToId["INTELLIGENCE"];
+    var boardId_intelligence = config.pmbot.leankit.boardNameToId["Intelligence (Stylable tool)"];
     var boardId_reactbases = config.pmbot.leankit.boardNameToId["React Bases"];
     var boardId_stylable = config.pmbot.leankit.boardNameToId["Stylable"];
 
@@ -83,7 +83,6 @@ module.exports = function (app, ready) {
         524709460: "@maksym",
         527138810: "@nadavov",
         524077603: "@benita",
-        524066795: "@noamg",
         524077606: "@ory",
         524709458: "@oleksii",
         524066793: "@talh",
@@ -120,7 +119,6 @@ module.exports = function (app, ready) {
         "Maksym Kramarenko": "@maksym",
         "nadav abrahami": "@nadavov",
         "Nir Benita": "@benita",
-        "Noam Geva": "@noamg",
         "O H": "@ory",
         "Oleksii Kirgizov": "@oleksii",
         "Tal Harel": "@talh",
@@ -144,35 +142,35 @@ module.exports = function (app, ready) {
 
     var boardNameToId = {
         "Core3 Execution": "517741114",
-        "AutoViews component": "520935890",
-        "Components Library": "520935889",
+        "Autoviews": "520935890",
+        "Components": "520935889",
         "Core3 Iteration Planing": "524067193",
         "Dev Rel - Bruce": "527462964",
         "Dev Server": "527462964",
         "DEVOPS": "520951053",
         "Docmentation": "520951047",
-        "INTELLIGENCE": "527142347",
+        "Intelligence (Stylable tool)": "527142347",
         "React Bases": "520951040",
         "Stylable": "520936591"        
     };
 
     var boardIdToName = {
         "517741114": "Core3 Execution",
-        "520935890": "AutoViews component",
-        "520935889": "Components Library",
+        "520935890": "Autoviews",
+        "520935889": "Components",
         "524067193": "Core3 Iteration Planing",
         "527462964": "Dev Rel - Bruce",
         "527462964": "Dev Server",
         "520951053": "DEVOPS",
         "520951047": "Docmentation",
-        "527142347": "INTELLIGENCE",
+        "527142347": "Intelligence (Stylable tool)",
         "520951040": "React Bases",
         "520936591": "Stylable"
     };
 
     var versionTags = ["iteration_one", "iteration_two", "iteration_three"];
 
-    var classOfServices = ["AutoViews", "Componenets lib product", "Components lib dev", "Components lib QA", "Components lib UX", "Dev Server", "DevOps", "Intelligence", "Product", "React bases", "Stylable", "Technical docs"];
+    var classOfServices = ["AutoViews", "Components product", "Components dev", "Components UX", "Dev Server", "DevOps", "Intelligence", "Product", "React bases", "Stylable", "Technical docs"];
 
     //botkit API events:
     var botkit_events = {
@@ -256,6 +254,11 @@ module.exports = function (app, ready) {
             boardIds.push(config.pmbot.leankit.boardNameToId[x]);
         }
 
+        if(message.text === 'channel_id'){
+            dals.slack.sendMessage("pbot", message.channel, 'This channel ID is:' + message.channel);
+            return;
+        }
+
         var regex = /(?:(?:https?|ftp|file):\/\/|www\.|ftp\.)(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#\/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#\/%=~_|$?!:,.]*\)|[A-Z0-9+&@#\/%=~_|$])/igm;
         //var match = regex.exec(message.text);
         var match = message.text.match(regex);
@@ -317,7 +320,7 @@ module.exports = function (app, ready) {
             });
     }
 
-    var botkit_hears_events = ['https://core3.leankit.com/Boards/View', ['direct_message', 'direct_mention', 'mention', 'ambient'],
+    var botkit_hears_events = [['https://core3.leankit.com/card', 'channel_id'], ['direct_message', 'direct_mention', 'mention', 'ambient'],
         function (bot, message) {
             //log.info('I just heard: ' + message.text);
             processMsg(bot, message);
