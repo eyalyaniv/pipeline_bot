@@ -1,24 +1,24 @@
 var log = require('osg-logger').of('dal/github'),
-var createHandler = require('node-github-webhook'),
-var http = require('http');
+    createHandler = require('node-github-webhook'),
+    http = require('http');
 
 module.exports = function (config, ready) {
 
     var api = {
     };
 
-    var handler = createHandler([ // multiple handlers 
-       { path: '/wixplosives', secret: 'secret1' }
-       //{ path: '/webhook2', secret: 'secret2' }
-     ])
-    //var handler = createHandler({ path: '/webhook1', secret: 'secret1' }) // single handler 
+    // var handler = createHandler([ 
+    //    { path: '/github', secret: 'pmbot' }
+    //    //{ path: '/webhook2', secret: 'secret2' }
+    //  ]);
+    var handler = createHandler({ path: '/github', secret: 'pmbot' }) // single handler 
      
     http.createServer(function (req, res) {
        handler(req, res, function (err) {
          res.statusCode = 404
          res.end('no such location')
        })
-    }).listen(7777)
+    }).listen(3001)
      
     handler.on('error', function (err) {
        console.error('Error:', err.message)
@@ -41,6 +41,10 @@ module.exports = function (config, ready) {
     //       // do sth else or nothing 
     //       break
        }
+    });
+
+    process.nextTick(function(){
+        ready(null,api);
     });
 };
 

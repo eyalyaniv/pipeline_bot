@@ -134,6 +134,17 @@ module.exports = function (config, ready) {
             }
         }
         //Send msg to bot owner defined in the config
+        if(!slackInt){
+            botkit_bot.say(
+                {
+                    text: "Slack Integration is OFF!, User did't get the message",
+                    channel: config.pmbot.slack.pmbotOwner, // The owner of the pmbot 
+                    parse: "full",
+                    link_names: 1,
+                    attachments: [] //This is a workaround to force sending the msg via slack postMessage and not through RTM service. In order for names and channels to be linked.
+                }
+            );
+        }
         if(msgType === "channelById"){
             getChannelById(target).then(function(res){
                 botkit_bot.say(

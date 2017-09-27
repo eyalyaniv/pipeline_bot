@@ -122,11 +122,11 @@ module.exports = function (config, ready) {
                 return cb(err);
             }
             cb(null, history);
-        });
+        }); 
     }
 
     function constructLeankitCardUrl(boardId, cardId) {
-        var cardUrl = "https://core3.leankit.com//Boards/View/" + boardId + "/" + cardId;
+        var cardUrl = "https://core3.leankit.com/Boards/View/" + boardId + "/" + cardId;
         return cardUrl;
     }
 

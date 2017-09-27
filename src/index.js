@@ -1,6 +1,7 @@
 
 var logger = require("osg-logger"),
-    config = require("osg-config-agent").get("pmbot.config")
+    config = require("osg-config-agent").get("pmbot.config"),
+    cors = require("cors")
     ;
 
 logger.configure(config.loggers); //Configure the logger service with config parameters
@@ -34,7 +35,15 @@ manager(
             return process.exit(1);
         }
 
+        webapp.use(cors());
+
         webapp.use('/pmbot', context.pmbot.routes);
+
+        // //Not safe only to debug!
+        // webapp.use(function(req, res, next) {
+        //     res.header("Access-Control-Allow-Origin", "*");
+        //     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        // });        
 
         vercheck.route(webapp);
 

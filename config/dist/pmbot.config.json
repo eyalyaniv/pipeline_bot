@@ -28,7 +28,7 @@
         "slack": {
             "pmbotOwner": "U69B1LVV1",
             "pmbotOwnerSlackNick": "@eyalyaniv",
-            "slackInt": true,
+            "slackInt": false,
             "isTestMode": false,
             "webhookUri": "https://hooks.slack.com/services/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",
             "slackApiToken": "xoxb-229557440388-YQ7no2bvQVrJ29lWdMmcWJ8s",

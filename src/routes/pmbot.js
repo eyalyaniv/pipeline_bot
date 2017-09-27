@@ -8,7 +8,13 @@ module.exports = function (controller, middlewares) {
 
 	router.get('/status', function (req, res) {
 		res.status(200);
-		//res.json({ e: 200, r: Date.now() });
+		res.json({ e: 200, r: Date.now() });
+	});
+
+	router.post('/github', function (req, res) {
+		res.status(200);
+		res.json({ e: 200, r: Date.now() });
+		
 	});
 
 	return router;

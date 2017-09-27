@@ -8,6 +8,7 @@
     "body-parser": "^1.15.1",
     "botkit": "^0.5.7",
     "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
     "express": "^4.14.0",
     "githubhook": "^1.9.1",
     "leankit-client": "^1.1.2",

@@ -36,7 +36,7 @@ module.exports = function (app, ready) {
             leankit: app.dal.of('leankit').bind(null, config),
             slack: app.dal.of('slack').bind(null, config),
             gsheets: app.dal.of('gsheets').bind(null, config),
-           // github: app.dal.of('github').bind(null, config)
+            github: app.dal.of('github').bind(null, config)
         },
         function (err, dals_) {
             if (err) {
@@ -249,13 +249,16 @@ module.exports = function (app, ready) {
     }    
 
     function processMsg(bot, message) {
+
+        //Create an array of all boards under the account for internal function use.
         var boardIds = [];
         for (var x in config.pmbot.leankit.boardNameToId) {
             boardIds.push(config.pmbot.leankit.boardNameToId[x]);
         }
 
+        //Specific command to get the channel and the user id's from within the channel.
         if(message.text === 'channel_id'){
-            dals.slack.sendMessage("pbot", message.channel, 'This channel ID is:' + message.channel);
+            dals.slack.sendMessage("pbot", message.channel, 'This channel ID is:' + message.channel + 'The user ID is: ' + message.user);
             return;
         }
 
