@@ -11,7 +11,7 @@ module.exports = function (config, ready) {
     //    { path: '/github', secret: 'pmbot' }
     //    //{ path: '/webhook2', secret: 'secret2' }
     //  ]);
-    var handler = createHandler({ path: '/github', secret: 'pmbot' }) // single handler 
+    var handler = createHandler({ path: '/github', secret: 'pmbot', debugMode: false }) // single handler 
      
     http.createServer(function (req, res) {
        handler(req, res, function (err) {

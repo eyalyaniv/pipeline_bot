@@ -17,17 +17,12 @@ module.exports = function (app, ready) {
     var validator = validations(config.pmbot.validations);
     var dals;
 
-    var boardId_execution = config.pmbot.leankit.boardNameToId["Core3 Execution"];
-    var boardId_autoviews = config.pmbot.leankit.boardNameToId["Autoviews"];
-    var boardId_components = config.pmbot.leankit.boardNameToId["Components"];
-    /**/var boardId_plan = config.pmbot.leankit.boardNameToId["Core3 Iteration Planing"];
-    var boardId_devrel = config.pmbot.leankit.boardNameToId["Dev Rel - Bruce"];
-    var boardId_devserver = config.pmbot.leankit.boardNameToId["Dev Server"];
-    /**/var boardId_devops = config.pmbot.leankit.boardNameToId["DEVOPS"];
-    var boardId_docmentation = config.pmbot.leankit.boardNameToId["Docmentation"];
-    var boardId_intelligence = config.pmbot.leankit.boardNameToId["Intelligence (Stylable tool)"];
-    var boardId_reactbases = config.pmbot.leankit.boardNameToId["React Bases"];
+    var boardId_autoviews = config.pmbot.leankit.boardNameToId["Autoviews - Kiev"];
+    var boardId_components = config.pmbot.leankit.boardNameToId["Components Factory"];
+    var boardId_dev_server = config.pmbot.leankit.boardNameToId["Dev Server"];
+    var boardId_dev_velocity = config.pmbot.leankit.boardNameToId["Dev Velocity"];
     var boardId_stylable = config.pmbot.leankit.boardNameToId["Stylable"];
+    var boardId_style_panel = config.pmbot.leankit.boardNameToId["Style-Panel"];
 
     var pmbot_leankit_id = config.pmbot.leankit.pmbot_leankit_id;
 
@@ -44,9 +39,12 @@ module.exports = function (app, ready) {
             }
             dals = dals_;
 
-            dals.leankit.generateEvents(leankitEventsList_execution_board, boardId_execution);
-            //dals.leankit.generateEvents(leankitEventsList_devops_board, boardId_devops);
-            //dals.leankit.generateEvents(leankitEventsList_plan_board, boardId_plan);
+            dals.leankit.generateEvents(leankitEventsList_autoviews_board, boardId_autoviews);
+            dals.leankit.generateEvents(leankitEventsList_components_board, boardId_components);
+            dals.leankit.generateEvents(leankitEventsList_dev_server_board, boardId_dev_server);
+            dals.leankit.generateEvents(leankitEventsList_dev_velocity_board, boardId_dev_velocity);
+            dals.leankit.generateEvents(leankitEventsList_stylable_board, boardId_stylable);
+            dals.leankit.generateEvents(leankitEventsList_style_panel_board, boardId_style_panel);
 
             dals.slack.generateEvents(botkit_events);
             dals.slack.generateHearsEvents(botkit_hears_events);
@@ -140,6 +138,7 @@ module.exports = function (app, ready) {
 
     }
 
+    //TODO: Need to refactor out
     var boardNameToId = {
         "Core3 Execution": "517741114",
         "Autoviews": "520935890",
@@ -154,6 +153,7 @@ module.exports = function (app, ready) {
         "Stylable": "520936591"        
     };
 
+    //TODO: Need to refactor out
     var boardIdToName = {
         "517741114": "Core3 Execution",
         "520935890": "Autoviews",
@@ -168,9 +168,9 @@ module.exports = function (app, ready) {
         "520936591": "Stylable"
     };
 
-    var versionTags = ["iteration_one", "iteration_two", "iteration_three"];
+    var versionTags = ["it1", "it2", "it3", "it4", "it5", "it7", "it8"];
 
-    var classOfServices = ["AutoViews", "Components product", "Components dev", "Components UX", "Dev Server", "DevOps", "Intelligence", "Product", "React bases", "Stylable", "Technical docs"];
+    var classOfServices = ["Development", "Product", "UX"]; //Effort Type
 
     //botkit API events:
     var botkit_events = {
@@ -330,144 +330,144 @@ module.exports = function (app, ready) {
         }
     ];
 
-    var leankitEventsList_execution_board = {
+    var leankitEventsList_autoviews_board = {
         "card-move-to-board": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "card-move-from-board": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "card-move": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "card-creation": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "card-blocked": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "card-deleted": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "card-fields-changed": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "user-assignment": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         },
         "comment-post": function (event) {
-            eventDispatcher(event, boardId_execution);
+            eventDispatcher(event, boardId_autoviews);
         }
     };
 
-    // var leankitEventsList_unity_board = {
-    //     "card-move-to-board": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
-    //     "card-creation": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
-    //     "card-blocked": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
-    //     "card-deleted": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
-    //     "card-fields-changed": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
-    //     "user-assignment": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
-    //     "comment-post": function (event) {
-    //         eventDispatcher(event, boardId_unity);
-    //     },
+    var leankitEventsList_components_board = {
+        "card-move-to-board": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
+        "card-creation": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
+        "card-blocked": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
+        "card-deleted": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
+        "card-fields-changed": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
+        "user-assignment": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
+        "comment-post": function (event) {
+            eventDispatcher(event, boardId_unity);
+        },
 
-    // };
+    };
 
-    // var leankitEventsList_game_engine_board = {
-    //     "card-creation": function (event) {
-    //         eventDispatcher(event, boardId_game_engine);
-    //     },
-    //     "card-blocked": function (event) {
-    //         eventDispatcher(event, boardId_game_engine);
-    //     },
-    //     "card-deleted": function (event) {
-    //         eventDispatcher(event, boardId_game_engine);
-    //     },
-    //     "card-fields-changed": function (event) {
-    //         eventDispatcher(event, boardId_game_engine);
-    //     },
-    //     "user-assignment": function (event) {
-    //         eventDispatcher(event, boardId_game_engine);
-    //     },
-    //     "comment-post": function (event) {
-    //         eventDispatcher(event, boardId_game_engine);
-    //     }
-    // };
+    var leankitEventsList_dev_server_board = {
+        "card-creation": function (event) {
+            eventDispatcher(event, boardId_game_engine);
+        },
+        "card-blocked": function (event) {
+            eventDispatcher(event, boardId_game_engine);
+        },
+        "card-deleted": function (event) {
+            eventDispatcher(event, boardId_game_engine);
+        },
+        "card-fields-changed": function (event) {
+            eventDispatcher(event, boardId_game_engine);
+        },
+        "user-assignment": function (event) {
+            eventDispatcher(event, boardId_game_engine);
+        },
+        "comment-post": function (event) {
+            eventDispatcher(event, boardId_game_engine);
+        }
+    };
 
-    // var leankitEventsList_game_managment_board = {
-    //     "card-creation": function (event) {
-    //         eventDispatcher(event, boardId_game_managment);
-    //     },
-    //     "card-blocked": function (event) {
-    //         eventDispatcher(event, boardId_game_managment);
-    //     },
-    //     "card-deleted": function (event) {
-    //         eventDispatcher(event, boardId_game_managment);
-    //     },
-    //     "card-fields-changed": function (event) {
-    //         eventDispatcher(event, boardId_game_managment);
-    //     },
-    //     "user-assignment": function (event) {
-    //         eventDispatcher(event, boardId_game_managment);
-    //     },
-    //     "comment-post": function (event) {
-    //         eventDispatcher(event, boardId_game_managment);
-    //     }
-    // };
+    var leankitEventsList_dev_velocity_board = {
+        "card-creation": function (event) {
+            eventDispatcher(event, boardId_game_managment);
+        },
+        "card-blocked": function (event) {
+            eventDispatcher(event, boardId_game_managment);
+        },
+        "card-deleted": function (event) {
+            eventDispatcher(event, boardId_game_managment);
+        },
+        "card-fields-changed": function (event) {
+            eventDispatcher(event, boardId_game_managment);
+        },
+        "user-assignment": function (event) {
+            eventDispatcher(event, boardId_game_managment);
+        },
+        "comment-post": function (event) {
+            eventDispatcher(event, boardId_game_managment);
+        }
+    };
 
-    // var leankitEventsList_devops_board = {
-    //     "card-creation": function (event) {
-    //         eventDispatcher(event, boardId_devops);
-    //     },
-    //     "card-blocked": function (event) {
-    //         eventDispatcher(event, boardId_devops);
-    //     },
-    //     "card-deleted": function (event) {
-    //         eventDispatcher(event, boardId_devops);
-    //     },
-    //     // "card-fields-changed": function (event) {
-    //     //     eventDispatcher(event, boardId_devops);
-    //     // },
-    //     "user-assignment": function (event) {
-    //         eventDispatcher(event, boardId_devops);
-    //     },
-    //     "comment-post": function (event) {
-    //         eventDispatcher(event, boardId_devops);
-    //     }
-    // };
+    var leankitEventsList_stylable_board = {
+        "card-creation": function (event) {
+            eventDispatcher(event, boardId_devops);
+        },
+        "card-blocked": function (event) {
+            eventDispatcher(event, boardId_devops);
+        },
+        "card-deleted": function (event) {
+            eventDispatcher(event, boardId_devops);
+        },
+        // "card-fields-changed": function (event) {
+        //     eventDispatcher(event, boardId_devops);
+        // },
+        "user-assignment": function (event) {
+            eventDispatcher(event, boardId_devops);
+        },
+        "comment-post": function (event) {
+            eventDispatcher(event, boardId_devops);
+        }
+    };
 
-    // var leankitEventsList_plan_board = {
-    //     // "card-creation": function (event) {
-    //     //     eventDispatcher(event, boardId_plan);
-    //     // },
-    //     "card-blocked": function (event) {
-    //         eventDispatcher(event, boardId_plan);
-    //     },
-    //     "card-deleted": function (event) {
-    //         eventDispatcher(event, boardId_plan);
-    //     },
-    //     //  "card-fields-changed": function (event) {
-    //     //     eventDispatcher(event, boardId_plan);
-    //     // },
-    //     "user-assignment": function (event) {
-    //         eventDispatcher(event, boardId_plan);
-    //     },
-    //     "comment-post": function (event) {
-    //         eventDispatcher(event, boardId_plan);
-    //     }
-    // };
+    var leankitEventsList_style_panel_board = {
+        // "card-creation": function (event) {
+        //     eventDispatcher(event, boardId_plan);
+        // },
+        "card-blocked": function (event) {
+            eventDispatcher(event, boardId_plan);
+        },
+        "card-deleted": function (event) {
+            eventDispatcher(event, boardId_plan);
+        },
+        //  "card-fields-changed": function (event) {
+        //     eventDispatcher(event, boardId_plan);
+        // },
+        "user-assignment": function (event) {
+            eventDispatcher(event, boardId_plan);
+        },
+        "comment-post": function (event) {
+            eventDispatcher(event, boardId_plan);
+        }
+    };
 
     function triggeredBySelf(event, eventName) {
         if (event.userId === pmbot_leankit_id) { //Ignore pmbot self actions 

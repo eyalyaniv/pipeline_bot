@@ -24,7 +24,7 @@ module.exports = function (config, ready) {
         stripHtmlFromText: stripHtmlFromText
     };
 
-    getBoard(leankitConfig.boardId_execution, function (err, board) {
+    getBoard(leankitConfig.boardNameToId["Style-Panel"], function (err, board) {
         boards.execution = board;
         ready(null, api);
     });

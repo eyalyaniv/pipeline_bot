@@ -9,22 +9,15 @@ module.exports = {
       email: "pipelinebot@gmail.com",
       password: "pipelinebot2leankit",
       pollInterval: 10, //Seconds
-      boardId_execution: 156116725, //Execution board Id
       pmbot_leankit_id: 530521792,
       boardNameToId: {
-                plan: "213572592",
-                execution: "156116725",
-                bi: "158334672",
-                marketing: "162843235",
-                devops: "195207449",
-                "game engine": "195208668",
-                unity: "195209674",
-                qa: "260684238",
-                rules: "295704070",
-                community: "297531259",
-                art: "333892671",
-                "product planning": "339642420",
-                "game managment": "344471340"
+        "Autoviews - Kiev": "578564059",
+        "Components Factory": "579725598",
+        "Dev Server": "609467370",
+        "Dev Velocity": "588655295",
+        "Stylable": "580802753",
+        "game engine": "195208668",
+        "Style-Panel": "580802756"
       }
     },
     slack:{

@@ -14,7 +14,6 @@ module.exports = function (controller, middlewares) {
 	router.post('/github', function (req, res) {
 		res.status(200);
 		res.json({ e: 200, r: Date.now() });
-		
 	});
 
 	return router;

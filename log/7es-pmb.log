@@ -16029,3 +16029,1725 @@ Known bug:
 [2017-09-27 18:31:40.024] [INFO] dal/leankit [leankit-client debug log:  events: 0]
 [2017-09-27 18:31:40.025] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
 [2017-09-27 18:31:53.475] [ERROR] console [Error: No X-Hub-Signature found on request]
+[2017-09-28 13:53:38.122] [INFO] lib/manager [module loaded]
+[2017-09-28 13:53:38.124] [INFO] lib/bi [module loaded]
+[2017-09-28 13:53:38.125] [INFO] lib/middlewares [module loded]
+[2017-09-28 13:53:38.394] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 13:53:38.403] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 13:53:38.404] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 13:53:38.405] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 13:53:38.405] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 13:53:38.406] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 13:53:38.464] [INFO] helpers/validations [module loaded]
+[2017-09-28 13:53:38.464] [INFO] controller/pmbot [module loaded]
+[2017-09-28 13:53:38.494] [INFO] routes/pmbot [module loaded]
+[2017-09-28 13:53:38.756] [INFO] dal/leankit [module loaded]
+[2017-09-28 13:53:39.401] [INFO] dal/slack [module loaded]
+[2017-09-28 13:53:39.403] [INFO] dal/gsheets [module loaded]
+[2017-09-28 13:53:39.689] [INFO] dal/github [module loaded]
+[2017-09-28 13:53:39.701] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 13:53:39.702] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 13:53:39.738] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 13:53:39.748] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 13:53:39.782] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 13:53:40.552] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 13:53:40.982] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 13:53:41.579] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 13:53:41.580] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 13:53:41.582] [INFO] version-checker [routed]
+[2017-09-28 13:53:41.583] [INFO] index [web server listen on port [3000]]
+[2017-09-28 13:53:42.707] [INFO] dal/leankit [leankit-client debug log:  current board version: 3921]
+[2017-09-28 13:53:42.707] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:53:42.708] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:53:43.076] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:53:43.078] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:53:43.079] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:53:58.084] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 13:53:58.085] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:53:58.086] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:53:58.421] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:53:58.422] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:53:58.424] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:54:13.429] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 13:54:13.430] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:54:13.431] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:54:13.820] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:54:13.824] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:54:13.826] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:54:46.894] [FATAL] index [TypeError: must provide 'mode' option
+    at checkType (/Users/eyalya/code/pipeline_bot/src/node_modules/node-github-webhook/index.js:57:15)
+    at handler (/Users/eyalya/code/pipeline_bot/src/node_modules/node-github-webhook/index.js:67:5)
+    at Server.<anonymous> (/Users/eyalya/code/pipeline_bot/src/dal/github.js:17:8)
+    at emitTwo (events.js:125:13)
+    at Server.emit (events.js:213:7)
+    at parserOnIncoming (_http_server.js:602:12)
+    at HTTPParser.parserOnHeadersComplete (_http_common.js:116:23)]
+[2017-09-28 13:54:46.902] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 13:54:46.906] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:54:46.908] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:54:46.914] [INFO] console [error: Error: Stale RTM connection, closing RTM]
+[2017-09-28 13:54:47.264] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:54:47.266] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:54:47.267] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:54:51.364] [INFO] lib/manager [module loaded]
+[2017-09-28 13:54:51.366] [INFO] lib/bi [module loaded]
+[2017-09-28 13:54:51.368] [INFO] lib/middlewares [module loded]
+[2017-09-28 13:54:51.637] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 13:54:51.641] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 13:54:51.642] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 13:54:51.643] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 13:54:51.643] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 13:54:51.643] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 13:54:51.701] [INFO] helpers/validations [module loaded]
+[2017-09-28 13:54:51.702] [INFO] controller/pmbot [module loaded]
+[2017-09-28 13:54:51.731] [INFO] routes/pmbot [module loaded]
+[2017-09-28 13:54:51.999] [INFO] dal/leankit [module loaded]
+[2017-09-28 13:54:52.611] [INFO] dal/slack [module loaded]
+[2017-09-28 13:54:52.613] [INFO] dal/gsheets [module loaded]
+[2017-09-28 13:54:52.906] [INFO] dal/github [module loaded]
+[2017-09-28 13:54:52.916] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 13:54:52.917] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 13:54:52.948] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 13:54:52.955] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 13:54:52.977] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 13:54:53.591] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 13:54:54.066] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 13:54:54.071] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 13:54:54.072] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 13:54:54.077] [INFO] version-checker [routed]
+[2017-09-28 13:54:54.079] [INFO] index [web server listen on port [3000]]
+[2017-09-28 13:54:54.904] [INFO] dal/leankit [leankit-client debug log:  current board version: 3921]
+[2017-09-28 13:54:54.904] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:54:54.906] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:54:55.102] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:54:55.104] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:54:55.105] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:55:44.547] [INFO] lib/manager [module loaded]
+[2017-09-28 13:55:44.548] [INFO] lib/bi [module loaded]
+[2017-09-28 13:55:44.549] [INFO] lib/middlewares [module loded]
+[2017-09-28 13:55:44.732] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 13:55:44.735] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 13:55:44.735] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 13:55:44.736] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 13:55:44.737] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 13:55:44.737] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 13:55:44.794] [INFO] helpers/validations [module loaded]
+[2017-09-28 13:55:44.795] [INFO] controller/pmbot [module loaded]
+[2017-09-28 13:55:44.829] [INFO] routes/pmbot [module loaded]
+[2017-09-28 13:55:45.039] [INFO] dal/leankit [module loaded]
+[2017-09-28 13:55:45.537] [INFO] dal/slack [module loaded]
+[2017-09-28 13:55:45.538] [INFO] dal/gsheets [module loaded]
+[2017-09-28 13:55:45.749] [INFO] dal/github [module loaded]
+[2017-09-28 13:55:45.757] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 13:55:45.758] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 13:55:45.783] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 13:55:45.790] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 13:55:45.814] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 13:55:46.259] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 13:55:46.832] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 13:55:46.835] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 13:55:46.836] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 13:55:46.842] [INFO] version-checker [routed]
+[2017-09-28 13:55:46.844] [INFO] index [web server listen on port [3000]]
+[2017-09-28 13:55:47.807] [INFO] dal/leankit [leankit-client debug log:  current board version: 3921]
+[2017-09-28 13:55:47.810] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:55:47.811] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:55:47.997] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:55:47.998] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:55:48.000] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:56:04.417] [ERROR] console [Error: No X-Github-Event found on request]
+[2017-09-28 13:57:49.357] [INFO] lib/manager [module loaded]
+[2017-09-28 13:57:49.359] [INFO] lib/bi [module loaded]
+[2017-09-28 13:57:49.360] [INFO] lib/middlewares [module loded]
+[2017-09-28 13:57:49.580] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 13:57:49.584] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 13:57:49.584] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 13:57:49.585] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 13:57:49.585] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 13:57:49.586] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 13:57:49.631] [INFO] helpers/validations [module loaded]
+[2017-09-28 13:57:49.632] [INFO] controller/pmbot [module loaded]
+[2017-09-28 13:57:49.664] [INFO] routes/pmbot [module loaded]
+[2017-09-28 13:57:49.867] [INFO] dal/leankit [module loaded]
+[2017-09-28 13:57:50.355] [INFO] dal/slack [module loaded]
+[2017-09-28 13:57:50.357] [INFO] dal/gsheets [module loaded]
+[2017-09-28 13:57:50.520] [INFO] dal/github [module loaded]
+[2017-09-28 13:57:50.530] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 13:57:50.531] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 13:57:50.557] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 13:57:50.564] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 13:57:50.587] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 13:57:50.988] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 13:57:51.635] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 13:57:51.638] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 13:57:51.640] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 13:57:51.646] [INFO] version-checker [routed]
+[2017-09-28 13:57:51.649] [INFO] index [web server listen on port [3000]]
+[2017-09-28 13:57:52.349] [INFO] dal/leankit [leankit-client debug log:  current board version: 3921]
+[2017-09-28 13:57:52.350] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3921 }]
+[2017-09-28 13:57:52.351] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:57:52.526] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:57:52.527] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:57:52.528] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 13:59:25.389] [INFO] lib/manager [module loaded]
+[2017-09-28 13:59:25.391] [INFO] lib/bi [module loaded]
+[2017-09-28 13:59:25.392] [INFO] lib/middlewares [module loded]
+[2017-09-28 13:59:25.600] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 13:59:25.603] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 13:59:25.603] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 13:59:25.604] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 13:59:25.605] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 13:59:25.605] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 13:59:25.650] [INFO] helpers/validations [module loaded]
+[2017-09-28 13:59:25.651] [INFO] controller/pmbot [module loaded]
+[2017-09-28 13:59:25.681] [INFO] routes/pmbot [module loaded]
+[2017-09-28 13:59:25.872] [INFO] dal/leankit [module loaded]
+[2017-09-28 13:59:26.341] [INFO] dal/slack [module loaded]
+[2017-09-28 13:59:26.342] [INFO] dal/gsheets [module loaded]
+[2017-09-28 13:59:26.526] [INFO] dal/github [module loaded]
+[2017-09-28 13:59:26.537] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 13:59:26.538] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 13:59:26.563] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 13:59:26.571] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 13:59:26.594] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 13:59:26.990] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 13:59:27.583] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 13:59:27.586] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 13:59:27.587] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 13:59:27.593] [INFO] version-checker [routed]
+[2017-09-28 13:59:27.596] [INFO] index [web server listen on port [3000]]
+[2017-09-28 13:59:28.488] [INFO] dal/leankit [leankit-client debug log:  current board version: 3924]
+[2017-09-28 13:59:28.489] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3924 }]
+[2017-09-28 13:59:28.490] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 13:59:28.736] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 13:59:28.737] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 13:59:28.739] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 14:07:52.804] [INFO] lib/manager [module loaded]
+[2017-09-28 14:07:52.806] [INFO] lib/bi [module loaded]
+[2017-09-28 14:07:52.807] [INFO] lib/middlewares [module loded]
+[2017-09-28 14:07:53.002] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 14:07:53.005] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 14:07:53.006] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 14:07:53.007] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 14:07:53.007] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 14:07:53.008] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 14:07:53.052] [INFO] helpers/validations [module loaded]
+[2017-09-28 14:07:53.053] [INFO] controller/pmbot [module loaded]
+[2017-09-28 14:07:53.085] [INFO] routes/pmbot [module loaded]
+[2017-09-28 14:07:53.276] [INFO] dal/leankit [module loaded]
+[2017-09-28 14:07:53.746] [INFO] dal/slack [module loaded]
+[2017-09-28 14:07:53.748] [INFO] dal/gsheets [module loaded]
+[2017-09-28 14:07:53.926] [INFO] dal/github [module loaded]
+[2017-09-28 14:07:53.935] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 14:07:53.936] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 14:07:53.962] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 14:07:53.969] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 14:07:53.993] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 14:07:54.430] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 14:07:55.016] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 14:07:55.019] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 14:07:55.020] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 14:07:55.024] [INFO] version-checker [routed]
+[2017-09-28 14:07:55.026] [INFO] index [web server listen on port [3000]]
+[2017-09-28 14:07:55.925] [INFO] dal/leankit [leankit-client debug log:  current board version: 3924]
+[2017-09-28 14:07:55.925] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3924 }]
+[2017-09-28 14:07:55.927] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 14:07:56.112] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 14:07:56.114] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 14:07:56.115] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 14:08:16.217] [ERROR] console [Error: No X-Github-Delivery found on request]
+[2017-09-28 14:08:16.226] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 14:08:16.227] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3924 }]
+[2017-09-28 14:08:16.229] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 14:08:18.150] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 14:08:18.151] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 14:08:18.152] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:36:59.337] [INFO] lib/manager [module loaded]
+[2017-09-28 15:36:59.341] [INFO] lib/bi [module loaded]
+[2017-09-28 15:36:59.342] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:36:59.645] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:36:59.649] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:36:59.650] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:36:59.650] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:36:59.651] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:36:59.651] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:36:59.709] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:36:59.711] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:36:59.750] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:37:00.090] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:37:00.730] [INFO] dal/slack [module loaded]
+[2017-09-28 15:37:00.732] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:37:00.821] [INFO] dal/github [module loaded]
+[2017-09-28 15:37:00.825] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:37:00.826] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:37:00.860] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:37:00.864] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:37:00.889] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:37:01.415] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:37:01.840] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:37:02.386] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:37:02.387] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:37:02.389] [INFO] version-checker [routed]
+[2017-09-28 15:37:02.391] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:37:03.713] [INFO] dal/leankit [leankit-client debug log:  current board version: 3925]
+[2017-09-28 15:37:03.714] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:37:03.716] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:37:04.190] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:37:04.192] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:37:04.193] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:37:15.154] [ERROR] console [Error: No X-Github-Delivery found on request]
+[2017-09-28 15:37:19.199] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:37:19.200] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:37:19.204] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:37:19.685] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:37:19.686] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:37:19.687] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:37:34.693] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:37:34.695] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:37:34.697] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:37:35.246] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:37:35.247] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:37:35.248] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:37:38.120] [ERROR] console [Error: No X-Github-Delivery found on request]
+[2017-09-28 15:37:50.251] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:37:50.252] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:37:50.254] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:37:50.736] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:37:50.738] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:37:50.739] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:38:03.304] [INFO] lib/manager [module loaded]
+[2017-09-28 15:38:03.305] [INFO] lib/bi [module loaded]
+[2017-09-28 15:38:03.306] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:38:03.509] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:38:03.512] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:38:03.513] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:38:03.513] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:38:03.514] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:38:03.514] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:38:03.563] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:38:03.565] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:38:03.607] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:38:03.826] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:38:04.383] [INFO] dal/slack [module loaded]
+[2017-09-28 15:38:04.385] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:38:04.603] [INFO] dal/github [module loaded]
+[2017-09-28 15:38:04.620] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:38:04.621] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:38:04.654] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:38:04.663] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:38:04.689] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:38:05.097] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:38:05.520] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:38:05.926] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:38:05.927] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:38:05.932] [INFO] version-checker [routed]
+[2017-09-28 15:38:05.934] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:38:09.270] [INFO] dal/leankit [leankit-client debug log:  current board version: 3925]
+[2017-09-28 15:38:09.270] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:38:09.272] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:38:09.588] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:38:09.590] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:38:09.591] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:38:24.593] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:38:24.595] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:38:24.596] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:38:25.010] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:38:25.011] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:38:25.013] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:38:40.016] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:38:40.018] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:38:40.019] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:38:40.331] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:38:40.332] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:38:40.333] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:38:43.155] [INFO] lib/manager [module loaded]
+[2017-09-28 15:38:43.157] [INFO] lib/bi [module loaded]
+[2017-09-28 15:38:43.158] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:38:43.377] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:38:43.381] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:38:43.381] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:38:43.382] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:38:43.382] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:38:43.383] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:38:43.429] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:38:43.430] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:38:43.462] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:38:43.659] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:38:44.143] [INFO] dal/slack [module loaded]
+[2017-09-28 15:38:44.145] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:38:44.303] [INFO] dal/github [module loaded]
+[2017-09-28 15:38:44.314] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:38:44.315] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:38:44.339] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:38:44.347] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:38:44.371] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:38:44.873] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:38:45.315] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:38:45.781] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:38:45.781] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:38:45.784] [INFO] version-checker [routed]
+[2017-09-28 15:38:45.785] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:38:46.857] [INFO] dal/leankit [leankit-client debug log:  current board version: 3925]
+[2017-09-28 15:38:46.858] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:38:46.859] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:38:47.177] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:38:47.178] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:38:47.180] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:44:09.895] [INFO] lib/manager [module loaded]
+[2017-09-28 15:44:09.897] [INFO] lib/bi [module loaded]
+[2017-09-28 15:44:09.898] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:44:10.156] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:44:10.158] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:44:10.159] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:44:10.160] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:44:10.160] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:44:10.161] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:44:10.206] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:44:10.207] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:44:10.239] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:44:10.456] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:44:10.950] [INFO] dal/slack [module loaded]
+[2017-09-28 15:44:10.951] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:44:11.106] [INFO] dal/github [module loaded]
+[2017-09-28 15:44:11.116] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:44:11.117] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:44:11.141] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:44:11.147] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:44:11.169] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:44:11.671] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:44:12.070] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:44:12.453] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:44:12.453] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:44:12.455] [INFO] version-checker [routed]
+[2017-09-28 15:44:12.456] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:44:13.501] [INFO] dal/leankit [leankit-client debug log:  current board version: 3925]
+[2017-09-28 15:44:13.502] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:44:13.503] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:44:13.891] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:44:13.892] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:44:13.894] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:44:16.016] [ERROR] console [Error: X-Hub-Signature does not match blob signature]
+[2017-09-28 15:44:28.895] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:44:28.896] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:44:28.897] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:44:29.641] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:44:29.645] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:44:29.645] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:46:23.315] [INFO] lib/manager [module loaded]
+[2017-09-28 15:46:23.317] [INFO] lib/bi [module loaded]
+[2017-09-28 15:46:23.318] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:46:23.534] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:46:23.538] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:46:23.538] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:46:23.539] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:46:23.539] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:46:23.540] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:46:23.589] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:46:23.590] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:46:23.633] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:46:23.825] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:46:24.312] [INFO] dal/slack [module loaded]
+[2017-09-28 15:46:24.314] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:46:24.494] [INFO] dal/github [module loaded]
+[2017-09-28 15:46:24.505] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:46:24.506] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:46:24.556] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:46:24.565] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:46:24.596] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:46:25.080] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:46:25.492] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:46:26.055] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:46:26.056] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:46:26.058] [INFO] version-checker [routed]
+[2017-09-28 15:46:26.059] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:46:27.442] [INFO] dal/leankit [leankit-client debug log:  current board version: 3925]
+[2017-09-28 15:46:27.443] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:46:27.444] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:46:27.905] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:46:27.907] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:46:27.908] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:46:30.386] [ERROR] console [Error: X-Hub-Signature does not match blob signature]
+[2017-09-28 15:46:57.401] [INFO] lib/manager [module loaded]
+[2017-09-28 15:46:57.402] [INFO] lib/bi [module loaded]
+[2017-09-28 15:46:57.403] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:46:57.652] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:46:57.656] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:46:57.656] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:46:57.657] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:46:57.658] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:46:57.658] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:46:57.709] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:46:57.710] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:46:57.746] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:46:57.988] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:46:58.502] [INFO] dal/slack [module loaded]
+[2017-09-28 15:46:58.503] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:46:58.699] [INFO] dal/github [module loaded]
+[2017-09-28 15:46:58.710] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:46:58.711] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:46:58.737] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:46:58.745] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:46:58.768] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:46:59.171] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:46:59.701] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:46:59.702] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:46:59.703] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:46:59.706] [INFO] version-checker [routed]
+[2017-09-28 15:46:59.707] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:47:00.579] [INFO] dal/leankit [leankit-client debug log:  current board version: 3925]
+[2017-09-28 15:47:00.580] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:47:00.581] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:47:00.813] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:47:00.814] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:47:00.814] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:47:15.819] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:47:15.822] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:47:15.824] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:47:16.068] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:47:16.068] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:47:16.069] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:47:31.074] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:47:31.075] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3925 }]
+[2017-09-28 15:47:31.077] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:47:31.313] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: true]
+[2017-09-28 15:47:31.314] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, events: 2]
+[2017-09-28 15:47:31.318] [INFO] dal/leankit [leankit-client debug log:  events: 2]
+[2017-09-28 15:47:31.319] [FATAL] controller/pmbot [The user ID: 524077605 is not present in the Leankit - Slack conversion table - Continue acting as "Owner"]
+[2017-09-28 15:47:31.320] [INFO] controller/pmbot ["card-move-to-board" event triggered by: eyalyaniv on Core3 Execution board.]
+[2017-09-28 15:47:31.321] [FATAL] controller/pmbot [The user ID: 524077605 is not present in the Leankit - Slack conversion table - Continue acting as "Owner"]
+[2017-09-28 15:47:31.322] [INFO] controller/pmbot ["card-fields-changed" event triggered by: eyalyaniv on Core3 Execution board.]
+[2017-09-28 15:47:31.323] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:47:31.520] [ERROR] controller/pmbot [Card has no tags, cannot determine card owner while dispatching event:  card-move-to-board]
+[2017-09-28 15:47:31.612] [ERROR] controller/pmbot [Card has no tags, cannot determine card owner while dispatching event:  card-fields-changed]
+[2017-09-28 15:47:31.695] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:47:31.701] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:47:46.327] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:47:46.328] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3927 }]
+[2017-09-28 15:47:46.330] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:47:50.479] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:47:50.480] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:47:50.481] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:48:05.484] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:48:05.486] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3927 }]
+[2017-09-28 15:48:05.489] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:48:05.706] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: true]
+[2017-09-28 15:48:05.707] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, events: 1]
+[2017-09-28 15:48:05.710] [INFO] dal/leankit [leankit-client debug log:  events: 1]
+[2017-09-28 15:48:05.711] [FATAL] controller/pmbot [The user ID: 524077605 is not present in the Leankit - Slack conversion table - Continue acting as "Owner"]
+[2017-09-28 15:48:05.712] [INFO] controller/pmbot ["card-move" event triggered by: eyalyaniv on Core3 Execution board.]
+[2017-09-28 15:48:05.715] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:48:05.996] [ERROR] controller/pmbot [Card has no tags, cannot determine card owner while dispatching event:  card-move]
+[2017-09-28 15:48:05.998] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:48:06.000] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:48:20.718] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:48:20.721] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3928 }]
+[2017-09-28 15:48:20.722] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:48:21.410] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:48:21.411] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:48:21.413] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:48:36.415] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:48:36.417] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3928 }]
+[2017-09-28 15:48:36.419] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:48:36.876] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:48:36.878] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:48:36.879] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:50:18.416] [INFO] lib/manager [module loaded]
+[2017-09-28 15:50:18.419] [INFO] lib/bi [module loaded]
+[2017-09-28 15:50:18.420] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:50:18.614] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:50:18.617] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:50:18.617] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:50:18.618] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:50:18.619] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:50:18.619] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:50:18.668] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:50:18.669] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:50:18.700] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:50:18.911] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:50:19.411] [INFO] dal/slack [module loaded]
+[2017-09-28 15:50:19.412] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:50:19.584] [INFO] dal/github [module loaded]
+[2017-09-28 15:50:19.592] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:50:19.594] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:50:19.624] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:50:19.634] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:50:19.660] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:50:20.276] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:50:20.731] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:50:24.476] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:50:24.477] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:50:24.482] [INFO] version-checker [routed]
+[2017-09-28 15:50:24.484] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:50:26.415] [INFO] dal/leankit [leankit-client debug log:  current board version: 3929]
+[2017-09-28 15:50:26.416] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3929 }]
+[2017-09-28 15:50:26.417] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:50:26.712] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:50:26.713] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:50:26.714] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:50:41.721] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:50:41.723] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3929 }]
+[2017-09-28 15:50:41.724] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:50:42.353] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: true]
+[2017-09-28 15:50:42.354] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, events: 1]
+[2017-09-28 15:50:42.356] [INFO] dal/leankit [leankit-client debug log:  events: 1]
+[2017-09-28 15:50:42.357] [FATAL] controller/pmbot [The user ID: 524077605 is not present in the Leankit - Slack conversion table - Continue acting as "Owner"]
+[2017-09-28 15:50:42.358] [INFO] controller/pmbot ["card-move" event triggered by: eyalyaniv on Core3 Execution board.]
+[2017-09-28 15:50:42.359] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:50:42.678] [ERROR] controller/pmbot [Card has no tags, cannot determine card owner while dispatching event:  card-move]
+[2017-09-28 15:50:43.188] [INFO] controller/pmbot [The card: https://core3.leankit.com/Boards/View/517741114/542364456 moved back to: In Progress on execution board null]
+[2017-09-28 15:50:43.192] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:50:43.195] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:50:57.364] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:50:57.365] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3930 }]
+[2017-09-28 15:50:57.367] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:50:57.810] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: true]
+[2017-09-28 15:50:57.812] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, events: 2]
+[2017-09-28 15:50:57.814] [INFO] dal/leankit [leankit-client debug log:  events: 2]
+[2017-09-28 15:50:57.815] [INFO] controller/pmbot [card-move event triggered by pmbot leankit user and canceled]
+[2017-09-28 15:50:57.816] [FATAL] controller/pmbot [The user ID: 524077605 is not present in the Leankit - Slack conversion table - Continue acting as "Owner"]
+[2017-09-28 15:50:57.818] [INFO] controller/pmbot ["card-move" event triggered by: eyalyaniv on Core3 Execution board.]
+[2017-09-28 15:50:57.819] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:50:58.748] [INFO] controller/pmbot [The card: https://core3.leankit.com/Boards/View/517741114/542386856 moved back to: Pending on execution board null]
+[2017-09-28 15:50:58.750] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:50:58.753] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:51:12.824] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:51:12.826] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3932 }]
+[2017-09-28 15:51:12.827] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:51:13.258] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: true]
+[2017-09-28 15:51:13.259] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, events: 2]
+[2017-09-28 15:51:13.263] [INFO] dal/leankit [leankit-client debug log:  events: 2]
+[2017-09-28 15:51:13.264] [INFO] controller/pmbot [card-move event triggered by pmbot leankit user and canceled]
+[2017-09-28 15:51:13.265] [FATAL] controller/pmbot [The user ID: 524077605 is not present in the Leankit - Slack conversion table - Continue acting as "Owner"]
+[2017-09-28 15:51:13.267] [INFO] controller/pmbot ["card-move" event triggered by: eyalyaniv on Core3 Execution board.]
+[2017-09-28 15:51:13.270] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:51:13.613] [ERROR] controller/pmbot [Card has no tags, cannot determine card owner while dispatching event:  card-move]
+[2017-09-28 15:51:14.103] [INFO] controller/pmbot [The card: https://core3.leankit.com/Boards/View/517741114/542364456 moved back to: In Progress on execution board null]
+[2017-09-28 15:51:14.104] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:51:14.108] [INFO] console [info: ** API CALL: https://slack.com/api/chat.postMessage]
+[2017-09-28 15:51:28.272] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:51:28.273] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3934 }]
+[2017-09-28 15:51:28.275] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:51:28.704] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: true]
+[2017-09-28 15:51:28.705] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, events: 1]
+[2017-09-28 15:51:28.706] [INFO] dal/leankit [leankit-client debug log:  events: 1]
+[2017-09-28 15:51:28.708] [INFO] controller/pmbot [card-move event triggered by pmbot leankit user and canceled]
+[2017-09-28 15:51:28.710] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:51:43.713] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:51:43.720] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:51:43.724] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:51:44.388] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:51:44.388] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:51:44.389] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:51:59.394] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:51:59.395] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:51:59.396] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:51:59.887] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:51:59.888] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:51:59.889] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:52:14.893] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:52:14.895] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:52:14.896] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:52:15.547] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:52:15.549] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:52:15.550] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:52:22.770] [INFO] lib/manager [module loaded]
+[2017-09-28 15:52:22.772] [INFO] lib/bi [module loaded]
+[2017-09-28 15:52:22.772] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:52:22.962] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:52:22.965] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:52:22.965] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:52:22.966] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:52:22.967] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:52:22.967] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:52:23.017] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:52:23.018] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:52:23.051] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:52:26.322] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:52:26.829] [INFO] dal/slack [module loaded]
+[2017-09-28 15:52:26.831] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:52:27.085] [INFO] dal/github [module loaded]
+[2017-09-28 15:52:27.099] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:52:27.100] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:52:27.133] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:52:27.141] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:52:27.167] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:52:27.585] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:52:28.034] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:52:28.037] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:52:28.038] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:52:28.044] [INFO] version-checker [routed]
+[2017-09-28 15:52:28.045] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:52:28.768] [INFO] dal/leankit [leankit-client debug log:  current board version: 3935]
+[2017-09-28 15:52:28.769] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:52:28.770] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:52:28.943] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:52:28.945] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:52:28.946] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:52:43.951] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:52:43.952] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:52:43.953] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:52:44.347] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:52:44.348] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:52:44.349] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:52:59.775] [INFO] lib/manager [module loaded]
+[2017-09-28 15:52:59.777] [INFO] lib/bi [module loaded]
+[2017-09-28 15:52:59.778] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:52:59.964] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:52:59.967] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:52:59.968] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:52:59.969] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:52:59.969] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:52:59.969] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:53:00.018] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:53:00.018] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:53:00.020] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:53:00.209] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:53:00.674] [INFO] dal/slack [module loaded]
+[2017-09-28 15:53:00.675] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:53:00.949] [INFO] dal/github [module loaded]
+[2017-09-28 15:53:00.958] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:53:00.959] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:53:00.983] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:53:00.990] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:53:01.017] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:53:01.596] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:53:02.061] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:53:02.516] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:53:02.517] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:53:02.519] [INFO] version-checker [routed]
+[2017-09-28 15:53:02.520] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:53:03.455] [INFO] dal/leankit [leankit-client debug log:  current board version: 3935]
+[2017-09-28 15:53:03.455] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:53:03.456] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:53:03.759] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:53:03.760] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:53:03.762] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:53:33.869] [INFO] console [error: Error: Stale RTM connection, closing RTM]
+[2017-09-28 15:53:33.873] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:53:33.874] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:53:33.876] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:53:34.700] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:53:34.701] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:53:34.702] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:53:49.708] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:53:49.710] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:53:49.712] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:53:50.398] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:53:50.399] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:53:50.400] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:54:05.401] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:54:05.403] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:54:05.404] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:54:05.913] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:54:05.914] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:54:05.915] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:54:14.706] [INFO] lib/manager [module loaded]
+[2017-09-28 15:54:14.708] [INFO] lib/bi [module loaded]
+[2017-09-28 15:54:14.709] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:54:14.895] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:54:14.897] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:54:14.898] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:54:14.899] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:54:14.899] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:54:14.900] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:54:14.947] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:54:14.948] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:54:14.949] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:54:15.143] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:54:15.609] [INFO] dal/slack [module loaded]
+[2017-09-28 15:54:15.610] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:54:15.831] [INFO] dal/github [module loaded]
+[2017-09-28 15:54:15.841] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:54:15.842] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:54:15.867] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:54:15.874] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:54:15.897] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:54:16.384] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:54:16.800] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:54:17.281] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:54:17.281] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:54:17.285] [INFO] version-checker [routed]
+[2017-09-28 15:54:17.286] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:54:18.518] [INFO] dal/leankit [leankit-client debug log:  current board version: 3935]
+[2017-09-28 15:54:18.519] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:54:18.520] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:54:18.988] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:54:18.990] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:54:18.991] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:54:26.874] [ERROR] console [Error: No X-Hub-Signature found on request]
+[2017-09-28 15:54:33.999] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:54:34.000] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:54:34.002] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:54:34.506] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:54:34.507] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:54:34.509] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:54:49.078] [INFO] lib/manager [module loaded]
+[2017-09-28 15:54:49.079] [INFO] lib/bi [module loaded]
+[2017-09-28 15:54:49.080] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:54:49.276] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:54:49.279] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:54:49.279] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:54:49.280] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:54:49.281] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:54:49.281] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:54:49.329] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:54:49.330] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:54:49.332] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:54:49.523] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:54:49.995] [INFO] dal/slack [module loaded]
+[2017-09-28 15:54:49.997] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:54:50.220] [INFO] dal/github [module loaded]
+[2017-09-28 15:54:50.230] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:54:50.231] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:54:50.254] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:54:50.263] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:54:50.286] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:54:51.051] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:54:51.518] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:54:54.868] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:54:54.869] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:54:54.871] [INFO] version-checker [routed]
+[2017-09-28 15:54:54.872] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:54:56.178] [INFO] dal/leankit [leankit-client debug log:  current board version: 3935]
+[2017-09-28 15:54:56.178] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:54:56.179] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:54:56.651] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:54:56.652] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:54:56.653] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:55:11.659] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:55:11.660] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:55:11.661] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:55:12.143] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:55:12.144] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:55:12.145] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:56:25.905] [INFO] console [error: Error: Stale RTM connection, closing RTM]
+[2017-09-28 15:56:25.909] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:56:25.910] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:56:25.912] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:56:26.597] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:56:26.598] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:56:26.600] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:57:11.100] [INFO] lib/manager [module loaded]
+[2017-09-28 15:57:11.102] [INFO] lib/bi [module loaded]
+[2017-09-28 15:57:11.103] [INFO] lib/middlewares [module loded]
+[2017-09-28 15:57:11.314] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2017-09-28 15:57:11.317] [INFO] cw:middleware [Send request metrics is disable from config]
+[2017-09-28 15:57:11.318] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2017-09-28 15:57:11.319] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2017-09-28 15:57:11.320] [INFO] cw:stats [Send stats is disable from config]
+[2017-09-28 15:57:11.320] [INFO] cw:index [cloudWatch module initiated]
+[2017-09-28 15:57:11.382] [INFO] helpers/validations [module loaded]
+[2017-09-28 15:57:11.383] [INFO] controller/pmbot [module loaded]
+[2017-09-28 15:57:11.384] [INFO] routes/pmbot [module loaded]
+[2017-09-28 15:57:11.599] [INFO] dal/leankit [module loaded]
+[2017-09-28 15:57:12.093] [INFO] dal/slack [module loaded]
+[2017-09-28 15:57:12.094] [INFO] dal/gsheets [module loaded]
+[2017-09-28 15:57:12.315] [INFO] dal/github [module loaded]
+[2017-09-28 15:57:12.328] [INFO] console [Initializing Botkit v0.5.7]
+[2017-09-28 15:57:12.328] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2017-09-28 15:57:12.357] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2017-09-28 15:57:12.365] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2017-09-28 15:57:12.387] [INFO] version-checker [Version data found : x 
+]
+[2017-09-28 15:57:13.074] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2017-09-28 15:57:13.531] [INFO] console [notice: RTM websocket opened]
+[2017-09-28 15:57:13.673] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2017-09-28 15:57:13.673] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2017-09-28 15:57:13.677] [INFO] version-checker [routed]
+[2017-09-28 15:57:13.678] [INFO] index [web server listen on port [3000]]
+[2017-09-28 15:57:14.766] [INFO] dal/leankit [leankit-client debug log:  current board version: 3935]
+[2017-09-28 15:57:14.767] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:57:14.768] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:57:15.106] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:57:15.107] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:57:15.109] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2017-09-28 15:57:22.177] [ERROR] console [Error: No X-Hub-Signature found on request]
+[2017-09-28 15:57:30.114] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2017-09-28 15:57:30.116] [INFO] dal/leankit [leankit-client polling log:  { id: '517741114', version: 3935 }]
+[2017-09-28 15:57:30.120] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2017-09-28 15:57:30.477] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2017-09-28 15:57:30.478] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2017-09-28 15:57:30.479] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 13:54:49.213] [INFO] lib/manager [module loaded]
+[2018-02-08 13:54:49.220] [INFO] lib/bi [module loaded]
+[2018-02-08 13:54:49.223] [INFO] lib/middlewares [module loded]
+[2018-02-08 13:54:49.553] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2018-02-08 13:54:49.557] [INFO] cw:middleware [Send request metrics is disable from config]
+[2018-02-08 13:54:49.557] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2018-02-08 13:54:49.558] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2018-02-08 13:54:49.558] [INFO] cw:stats [Send stats is disable from config]
+[2018-02-08 13:54:49.559] [INFO] cw:index [cloudWatch module initiated]
+[2018-02-08 13:54:49.603] [INFO] helpers/validations [module loaded]
+[2018-02-08 13:54:49.603] [INFO] controller/pmbot [module loaded]
+[2018-02-08 13:54:49.606] [INFO] routes/pmbot [module loaded]
+[2018-02-08 13:54:49.949] [INFO] dal/leankit [module loaded]
+[2018-02-08 13:54:50.738] [INFO] dal/slack [module loaded]
+[2018-02-08 13:54:50.740] [INFO] dal/gsheets [module loaded]
+[2018-02-08 13:54:50.746] [INFO] dal/github [module loaded]
+[2018-02-08 13:54:50.749] [INFO] console [Initializing Botkit v0.5.7]
+[2018-02-08 13:54:50.749] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2018-02-08 13:54:50.797] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2018-02-08 13:54:50.800] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2018-02-08 13:54:50.845] [INFO] version-checker [Version data found : x 
+]
+[2018-02-08 13:54:51.171] [ERROR] dal/leankit [Error getting boards: { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/517741114',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 13:54:51.351] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2018-02-08 13:54:52.899] [INFO] console [notice: RTM websocket opened]
+[2018-02-08 13:54:52.902] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 13:54:52.903] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 13:54:52.906] [INFO] version-checker [routed]
+[2018-02-08 13:54:52.908] [INFO] index [web server listen on port [3000]]
+[2018-02-08 13:54:53.130] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/517741114',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 13:54:53.133] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 13:55:08.135] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 13:55:08.137] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 13:55:08.576] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/517741114',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 13:55:08.579] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 13:55:23.584] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 13:55:23.586] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 13:55:24.045] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/517741114',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 13:55:24.048] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 14:51:50.451] [INFO] lib/manager [module loaded]
+[2018-02-08 14:51:50.453] [INFO] lib/bi [module loaded]
+[2018-02-08 14:51:50.456] [INFO] lib/middlewares [module loded]
+[2018-02-08 14:51:50.760] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2018-02-08 14:51:50.767] [INFO] cw:middleware [Send request metrics is disable from config]
+[2018-02-08 14:51:50.768] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2018-02-08 14:51:50.768] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2018-02-08 14:51:50.769] [INFO] cw:stats [Send stats is disable from config]
+[2018-02-08 14:51:50.769] [INFO] cw:index [cloudWatch module initiated]
+[2018-02-08 14:51:50.815] [INFO] helpers/validations [module loaded]
+[2018-02-08 14:51:50.815] [INFO] controller/pmbot [module loaded]
+[2018-02-08 14:51:50.817] [INFO] routes/pmbot [module loaded]
+[2018-02-08 14:51:51.125] [INFO] dal/leankit [module loaded]
+[2018-02-08 14:51:51.798] [INFO] dal/slack [module loaded]
+[2018-02-08 14:51:51.800] [INFO] dal/gsheets [module loaded]
+[2018-02-08 14:51:51.804] [INFO] dal/github [module loaded]
+[2018-02-08 14:51:51.807] [INFO] console [Initializing Botkit v0.5.7]
+[2018-02-08 14:51:51.807] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2018-02-08 14:51:51.845] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2018-02-08 14:51:51.849] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2018-02-08 14:51:51.887] [INFO] version-checker [Version data found : x 
+]
+[2018-02-08 14:51:52.276] [ERROR] dal/leankit [Error getting boards: { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 14:51:52.326] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2018-02-08 14:51:52.679] [INFO] console [notice: RTM websocket opened]
+[2018-02-08 14:51:52.682] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 14:51:52.685] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 14:51:52.688] [INFO] version-checker [routed]
+[2018-02-08 14:51:52.690] [INFO] index [web server listen on port [3000]]
+[2018-02-08 14:51:52.883] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520935890',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 14:51:52.885] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 14:52:07.886] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 14:52:07.889] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 14:52:08.085] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520935890',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 14:52:08.088] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:20.834] [INFO] lib/manager [module loaded]
+[2018-02-08 17:03:20.836] [INFO] lib/bi [module loaded]
+[2018-02-08 17:03:20.839] [INFO] lib/middlewares [module loded]
+[2018-02-08 17:03:21.193] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2018-02-08 17:03:21.203] [INFO] cw:middleware [Send request metrics is disable from config]
+[2018-02-08 17:03:21.205] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2018-02-08 17:03:21.206] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2018-02-08 17:03:21.206] [INFO] cw:stats [Send stats is disable from config]
+[2018-02-08 17:03:21.207] [INFO] cw:index [cloudWatch module initiated]
+[2018-02-08 17:03:21.234] [INFO] helpers/validations [module loaded]
+[2018-02-08 17:03:21.234] [INFO] controller/pmbot [module loaded]
+[2018-02-08 17:03:21.236] [INFO] routes/pmbot [module loaded]
+[2018-02-08 17:03:21.599] [INFO] dal/leankit [module loaded]
+[2018-02-08 17:03:22.509] [INFO] dal/slack [module loaded]
+[2018-02-08 17:03:22.511] [INFO] dal/gsheets [module loaded]
+[2018-02-08 17:03:22.521] [INFO] dal/github [module loaded]
+[2018-02-08 17:03:22.525] [INFO] console [Initializing Botkit v0.5.7]
+[2018-02-08 17:03:22.526] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2018-02-08 17:03:22.561] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2018-02-08 17:03:22.568] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2018-02-08 17:03:22.621] [INFO] version-checker [Version data found : x 
+]
+[2018-02-08 17:03:22.915] [ERROR] dal/leankit [Error getting boards: { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:23.054] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2018-02-08 17:03:23.449] [INFO] console [notice: RTM websocket opened]
+[2018-02-08 17:03:23.451] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:03:23.453] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:23.455] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:03:23.457] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:23.458] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:03:23.459] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:23.460] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:03:23.461] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:23.462] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:03:23.463] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:23.464] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:03:23.465] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:23.466] [INFO] version-checker [routed]
+[2018-02-08 17:03:23.468] [INFO] index [web server listen on port [3000]]
+[2018-02-08 17:03:23.661] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:23.664] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:23.667] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:23.668] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:24.083] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:24.086] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:24.090] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:24.093] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:24.095] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520935891',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:24.096] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:24.098] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520936591',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:24.100] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:38.669] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:38.670] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:38.672] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:38.672] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:38.853] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:38.855] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:38.858] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:38.860] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:39.089] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:39.091] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:39.093] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:39.095] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:39.102] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:39.104] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:39.106] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:39.108] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:39.289] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:39.293] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:39.297] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:39.299] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:39.303] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520935891',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:39.305] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:39.306] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520936591',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:39.308] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:53.859] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:53.861] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:53.867] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:53.868] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:54.139] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:54.145] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:54.175] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:54.179] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:54.296] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:54.298] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:54.303] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:54.305] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:54.311] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:54.313] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:54.314] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:03:54.316] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:03:54.496] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:54.499] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:54.530] [INFO] dal/leankit [leankit-client error log:  { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:54.534] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:54.778] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520936591',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:54.782] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:03:54.786] [INFO] dal/leankit [leankit-client error log:  { apiError: You do not have the necessary permission to perform this action. Contact your administrator.
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 1000,
+  replyCode: 1000,
+  replyText: 'You do not have the necessary permission to perform this action. Contact your administrator.',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/520935891',
+       UserAddress: '10.60.5.24',
+       Headers: [Object] } ] }]
+[2018-02-08 17:03:54.787] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:05:32.804] [INFO] lib/manager [module loaded]
+[2018-02-08 17:05:32.806] [INFO] lib/bi [module loaded]
+[2018-02-08 17:05:32.808] [INFO] lib/middlewares [module loded]
+[2018-02-08 17:05:33.055] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2018-02-08 17:05:33.057] [INFO] cw:middleware [Send request metrics is disable from config]
+[2018-02-08 17:05:33.058] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2018-02-08 17:05:33.058] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2018-02-08 17:05:33.059] [INFO] cw:stats [Send stats is disable from config]
+[2018-02-08 17:05:33.059] [INFO] cw:index [cloudWatch module initiated]
+[2018-02-08 17:05:33.079] [INFO] helpers/validations [module loaded]
+[2018-02-08 17:05:33.080] [INFO] controller/pmbot [module loaded]
+[2018-02-08 17:05:33.081] [INFO] routes/pmbot [module loaded]
+[2018-02-08 17:05:33.319] [INFO] dal/leankit [module loaded]
+[2018-02-08 17:05:33.846] [INFO] dal/slack [module loaded]
+[2018-02-08 17:05:33.849] [INFO] dal/gsheets [module loaded]
+[2018-02-08 17:05:33.852] [INFO] dal/github [module loaded]
+[2018-02-08 17:05:33.855] [INFO] console [Initializing Botkit v0.5.7]
+[2018-02-08 17:05:33.856] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2018-02-08 17:05:33.886] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2018-02-08 17:05:33.889] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2018-02-08 17:05:33.925] [INFO] version-checker [Version data found : x 
+]
+[2018-02-08 17:05:34.216] [ERROR] dal/leankit [Error getting boards: { apiError: The parameters dictionary contains a null entry for parameter 'boardId' of non-nullable type 'System.Int64' for method 'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)' in 'Kanban.Web.Areas.API.Controllers.BoardController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+Parameter name: parameters
+    at parseReplyData (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:48:15)
+    at Request._callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/client.js:163:6)
+    at Request.init.self.callback (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:188:22)
+    at Request.emit (events.js:160:13)
+    at Request.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1171:10)
+    at Request.emit (events.js:160:13)
+    at IncomingMessage.<anonymous> (/Users/eyalya/code/pipeline_bot/src/node_modules/leankit-client/node_modules/request/request.js:1091:12)
+    at Object.onceWrapper (events.js:255:19)
+    at IncomingMessage.emit (events.js:165:20)
+    at endReadableNT (_stream_readable.js:1101:12)
+  name: 'apiError',
+  httpStatusCode: 503,
+  replyCode: 503,
+  replyText: 'The parameters dictionary contains a null entry for parameter \'boardId\' of non-nullable type \'System.Int64\' for method \'Kanban.Web.Controllers.Result.AjaxResult Get(Int64)\' in \'Kanban.Web.Areas.API.Controllers.BoardController\'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.\r\nParameter name: parameters',
+  replyData: 
+   [ { Resource: 'GET /kanban/api/boards/undefined',
+       UserAddress: '10.60.5.12',
+       Headers: [Object] } ] }]
+[2018-02-08 17:12:33.805] [INFO] lib/manager [module loaded]
+[2018-02-08 17:12:33.807] [INFO] lib/bi [module loaded]
+[2018-02-08 17:12:33.810] [INFO] lib/middlewares [module loded]
+[2018-02-08 17:12:34.014] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2018-02-08 17:12:34.018] [INFO] cw:middleware [Send request metrics is disable from config]
+[2018-02-08 17:12:34.018] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2018-02-08 17:12:34.019] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2018-02-08 17:12:34.019] [INFO] cw:stats [Send stats is disable from config]
+[2018-02-08 17:12:34.020] [INFO] cw:index [cloudWatch module initiated]
+[2018-02-08 17:12:34.039] [INFO] helpers/validations [module loaded]
+[2018-02-08 17:12:34.039] [INFO] controller/pmbot [module loaded]
+[2018-02-08 17:12:34.041] [INFO] routes/pmbot [module loaded]
+[2018-02-08 17:12:34.260] [INFO] dal/leankit [module loaded]
+[2018-02-08 17:12:34.753] [INFO] dal/slack [module loaded]
+[2018-02-08 17:12:34.755] [INFO] dal/gsheets [module loaded]
+[2018-02-08 17:12:34.759] [INFO] dal/github [module loaded]
+[2018-02-08 17:12:34.761] [INFO] console [Initializing Botkit v0.5.7]
+[2018-02-08 17:12:34.762] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2018-02-08 17:12:34.784] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2018-02-08 17:12:34.786] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2018-02-08 17:12:34.834] [INFO] version-checker [Version data found : x 
+]
+[2018-02-08 17:12:35.232] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
+[2018-02-08 17:12:35.584] [INFO] console [notice: RTM websocket opened]
+[2018-02-08 17:12:35.586] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:12:35.587] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:12:35.589] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:12:35.590] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:12:35.591] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:12:35.592] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:12:35.593] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:12:35.594] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:12:35.595] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:12:35.596] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:12:35.597] [INFO] dal/leankit [leankit-client debug log:  starting event polling...]
+[2018-02-08 17:12:35.598] [INFO] dal/leankit [leankit-client debug log:  no board version specified, getting current board]
+[2018-02-08 17:12:35.599] [INFO] version-checker [routed]
+[2018-02-08 17:12:35.600] [INFO] index [web server listen on port [3000]]
+[2018-02-08 17:12:35.895] [INFO] dal/leankit [leankit-client debug log:  current board version: 151]
+[2018-02-08 17:12:35.897] [INFO] dal/leankit [leankit-client polling log:  { id: '609467370', version: 151 }]
+[2018-02-08 17:12:35.899] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:36.075] [INFO] dal/leankit [leankit-client debug log:  current board version: 2677]
+[2018-02-08 17:12:36.076] [INFO] dal/leankit [leankit-client polling log:  { id: '579725598', version: 2677 }]
+[2018-02-08 17:12:36.077] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:36.089] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:36.090] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:36.091] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:36.291] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:36.292] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:36.293] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:36.460] [INFO] dal/leankit [leankit-client debug log:  current board version: 246]
+[2018-02-08 17:12:36.461] [INFO] dal/leankit [leankit-client polling log:  { id: '588655295', version: 246 }]
+[2018-02-08 17:12:36.463] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:36.645] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:36.645] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:36.646] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:36.659] [INFO] dal/leankit [leankit-client debug log:  current board version: 1653]
+[2018-02-08 17:12:36.659] [INFO] dal/leankit [leankit-client polling log:  { id: '578564059', version: 1653 }]
+[2018-02-08 17:12:36.660] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:36.798] [INFO] dal/leankit [leankit-client debug log:  current board version: 2318]
+[2018-02-08 17:12:36.800] [INFO] dal/leankit [leankit-client polling log:  { id: '580802756', version: 2318 }]
+[2018-02-08 17:12:36.801] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:36.850] [INFO] dal/leankit [leankit-client debug log:  current board version: 1695]
+[2018-02-08 17:12:36.852] [INFO] dal/leankit [leankit-client polling log:  { id: '580802753', version: 1695 }]
+[2018-02-08 17:12:36.853] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:36.856] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:36.857] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:36.857] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:36.983] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:36.985] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:36.987] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:37.081] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:37.082] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:37.083] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:51.094] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:12:51.095] [INFO] dal/leankit [leankit-client polling log:  { id: '609467370', version: 151 }]
+[2018-02-08 17:12:51.096] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:51.297] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:12:51.298] [INFO] dal/leankit [leankit-client polling log:  { id: '579725598', version: 2677 }]
+[2018-02-08 17:12:51.299] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:51.338] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:51.340] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:51.341] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:51.480] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:51.481] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:51.482] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:51.649] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:12:51.651] [INFO] dal/leankit [leankit-client polling log:  { id: '588655295', version: 246 }]
+[2018-02-08 17:12:51.652] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:51.833] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:51.836] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:51.838] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:51.861] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:12:51.864] [INFO] dal/leankit [leankit-client polling log:  { id: '578564059', version: 1653 }]
+[2018-02-08 17:12:51.867] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:51.992] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:12:51.994] [INFO] dal/leankit [leankit-client polling log:  { id: '580802756', version: 2318 }]
+[2018-02-08 17:12:51.995] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:52.053] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:52.054] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:52.056] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:52.086] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:12:52.087] [INFO] dal/leankit [leankit-client polling log:  { id: '580802753', version: 1695 }]
+[2018-02-08 17:12:52.088] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:12:52.181] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:52.182] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:52.183] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:12:52.277] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:12:52.278] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:12:52.279] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:06.342] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:13:06.345] [INFO] dal/leankit [leankit-client polling log:  { id: '609467370', version: 151 }]
+[2018-02-08 17:13:06.347] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:13:06.488] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:13:06.492] [INFO] dal/leankit [leankit-client polling log:  { id: '579725598', version: 2677 }]
+[2018-02-08 17:13:06.495] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:13:06.644] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:13:06.645] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:13:06.646] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:06.720] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:13:06.722] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:13:06.723] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:06.840] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:13:06.843] [INFO] dal/leankit [leankit-client polling log:  { id: '588655295', version: 246 }]
+[2018-02-08 17:13:06.845] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:13:07.047] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:13:07.049] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:13:07.051] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:07.057] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:13:07.059] [INFO] dal/leankit [leankit-client polling log:  { id: '578564059', version: 1653 }]
+[2018-02-08 17:13:07.061] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:13:07.188] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:13:07.191] [INFO] dal/leankit [leankit-client polling log:  { id: '580802756', version: 2318 }]
+[2018-02-08 17:13:07.194] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:13:07.283] [INFO] dal/leankit [leankit-client debug log:  scheduled poll starting...]
+[2018-02-08 17:13:07.284] [INFO] dal/leankit [leankit-client polling log:  { id: '580802753', version: 1695 }]
+[2018-02-08 17:13:07.285] [INFO] dal/leankit [leankit-client debug log:  calling client.getBoardUpdates...]
+[2018-02-08 17:13:07.292] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:13:07.293] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:13:07.294] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:07.458] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:13:07.460] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:13:07.462] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:07.495] [INFO] dal/leankit [leankit-client debug log:  client.getBoardUpdates, hasUpdates: false]
+[2018-02-08 17:13:07.497] [INFO] dal/leankit [leankit-client debug log:  events: 0]
+[2018-02-08 17:13:07.499] [INFO] dal/leankit [leankit-client debug log:  scheduling next poll]
+[2018-02-08 17:13:25.472] [INFO] lib/manager [module loaded]
+[2018-02-08 17:13:25.474] [INFO] lib/bi [module loaded]
+[2018-02-08 17:13:25.476] [INFO] lib/middlewares [module loded]
+[2018-02-08 17:13:25.717] [INFO] cw:index [cloudWatch module is disabled from config (config.cloudWatch.enable)]
+[2018-02-08 17:13:25.720] [INFO] cw:middleware [Send request metrics is disable from config]
+[2018-02-08 17:13:25.721] [INFO] cw:concurrent [Send concurrent counter is disable from config]
+[2018-02-08 17:13:25.721] [INFO] cw:sequence [Send sequence counter is disable from config]
+[2018-02-08 17:13:25.722] [INFO] cw:stats [Send stats is disable from config]
+[2018-02-08 17:13:25.723] [INFO] cw:index [cloudWatch module initiated]
+[2018-02-08 17:13:25.744] [INFO] helpers/validations [module loaded]
+[2018-02-08 17:13:25.745] [INFO] controller/pmbot [module loaded]
+[2018-02-08 17:13:25.746] [INFO] routes/pmbot [module loaded]
+[2018-02-08 17:13:25.984] [INFO] dal/leankit [module loaded]
+[2018-02-08 17:13:26.481] [INFO] dal/slack [module loaded]
+[2018-02-08 17:13:26.482] [INFO] dal/gsheets [module loaded]
+[2018-02-08 17:13:26.486] [INFO] dal/github [module loaded]
+[2018-02-08 17:13:26.488] [INFO] console [Initializing Botkit v0.5.7]
+[2018-02-08 17:13:26.489] [INFO] console [info: ** No persistent storage method specified! Data may be lost when process shuts down.]
+[2018-02-08 17:13:26.515] [INFO] console [info: ** Setting up custom handlers for processing Slack messages]
+[2018-02-08 17:13:26.518] [INFO] console [info: ** API CALL: https://slack.com/api/rtm.connect]
+[2018-02-08 17:13:26.552] [INFO] version-checker [Version data found : x 
+]
+[2018-02-08 17:13:26.952] [INFO] console [notice: ** BOT ID: pbot ...attempting to connect to RTM!]
